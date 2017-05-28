@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include("blocks/header_links.php") ;?>  
+    <?php include("blocks/header_links.php"); ?>  
     <title>Підрозділи</title>   
   </head>
   <body>
 	<header>		
-		  <?php include("blocks/header.php") ;?>
+		  <?php include("blocks/header.php"); ?>
 	<script>
         $(window).load(function(){   
-           document.getElementById("header_units").className      = 'active';
+           document.getElementById("header_units").className = 'active';
         });
       </script>
 	</header>
@@ -22,8 +22,76 @@
 			</div>		
 		</div>	
 	</div>
+
+	<? 
+
+	   include("blocks/db.php");
+       if ($result = mysqli_query($db, 'SELECT * FROM units ORDER BY id')) 
+	   {
+           while( $myrow = mysqli_fetch_assoc($result) )
+		   { 
+                printf("<a name='%s'></a>
+				        <div class='services'>
+	                        <div class='container'>
+	                        	<h3>%s</h3>
+	                        	<hr>
+	                        	<div class='col-md-3'>
+	                        		<img src='images/units/%s/%s.png' class='img-responsive' style='width:100%%'>
+	                        	</div>
+	                        	
+	                        	<div class='col-md-9'>
+	                        		<div class='media'>
+	                        			<ul>
+                                              <li>
+	                        					<div class='media-body'>
+	                        						<h5 class='media-heading'>Голова:</h5>
+	                        					</div>
+	                        				</li>
+                                              <li>
+	                        					<div class='media-left'>
+	                        						<i class='fa fa-user'></i>						
+	                        					</div>
+	                        					<div class='media-body'>
+	                        						<h4 class='media-heading'>%s</h4>
+	                        					</div>
+	                        				</li>
+	                        				<li>
+	                        					<div class='media-left'>
+	                        						<i class='fa fa-pencil'></i>						
+	                        					</div>
+	                        					<div class='media-body'>
+	                        						<h4 class='media-heading'>%s</h4>
+	                        					</div>
+	                        				</li>
+	                        				<li>
+	                        					<div class='media-left'>
+	                        						<i class='fa fa-envelope-o'></i>						
+	                        					</div>
+	                        					<div class='media-body'>
+	                        						<h4 class='media-heading'>%s</h4>
+	                        					</div>
+	                        				</li>
+	                        				<li>
+	                        					<div class='media-left'>
+	                        						<i class='fa fa-globe'></i>						
+	                        					</div>
+	                        					<div class='media-body'>
+	                        						<h4 class='media-heading'><a href='%s' target='_blank'>%s</a></h4>
+	                        					</div>
+	                        				</li>
+	                        			</ul>
+	                        		</div>
+	                        	</div>
+	                        </div>
+	                    </div>
+						<hr style='color:black !important;line-height: 4px;'>",  $myrow['short_name'], $myrow['region'],$myrow['short_name'], $myrow['short_name'], $myrow['head'], $myrow['telephone'], $myrow['email'], $myrow['web_adress'], $myrow['web_adress']); 
+           } 
+           mysqli_free_result($result); 
+	   }
+	   mysqli_close($db); 
+	?>
 	
-	<div class="services">
+	<!--<div class="services">
 		<div class="container">
 			<h3>Київська область</h3>
 			<hr>
@@ -78,7 +146,7 @@
 	</div>	
 	
 	<div class="sub-services">		
-	</div>
+	</div>-->
 	
 	
 	<footer>
