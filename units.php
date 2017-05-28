@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include("blocks/header_links.php") ;?>  
+    <?php include("blocks/header_links.php"); ?>  
     <title>Підрозділи</title>   
   </head>
   <body>
 	<header>		
-		  <?php include("blocks/header.php") ;?>
+		  <?php include("blocks/header.php"); ?>
 	<script>
         $(window).load(function(){   
            document.getElementById("header_units").className = 'active';
@@ -22,6 +22,11 @@
 			</div>		
 		</div>	
 	</div>
+
+	<? 
+	   include("blocks/db.php");	
+	   
+	?>
 	
 	<div class="services">
 		<div class="container">
