@@ -8,19 +8,19 @@
 
 <body>
   <header>
-    <?php include("blocks/header.php"); ?>
+      <?php include("blocks/header.php"); ?>
       <script>
-        function showStatus() {   
-               var el = document.getElementById('status');
-               var display = getComputedStyle(el).display;
-               el.style.display = display === 'none' ? 'block' : 'none';                     
-            // alert("08.10.2010 року ВФВСБ наказом № 3531 Міністерства України у справах молоді, сім'ї та спорту присвоєно статус <b>«Національної»</b>", this);
-        }
-             
-        $(window).load(function(){   
-           document.getElementById("header_index").className = 'active';          
-      }); 
-</script>
+               function showStatus() {   
+                      var el = document.getElementById('status');
+                      var display = getComputedStyle(el).display;
+                      el.style.display = display === 'none' ? 'block' : 'none';                     
+                   // alert("08.10.2010 року ВФВСБ наказом № 3531 Міністерства України у справах молоді, сім'ї та спорту присвоєно статус <b>«Національної»</b>", this);
+               }
+                    
+               $(window).load(function(){   
+                  document.getElementById("header_index").className = 'active';          
+             }); 
+      </script>
   </header>
 
   <section id="main-slider" class="no-margin">
