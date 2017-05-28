@@ -9,7 +9,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<div class="navbar-brand">
-					<!-- <a href="index.html"><h1><span>Військово-спортивні</span> багатоборства</h1></a> -->
+					<a href="index.html"><h1><span></span></h1></a> 
 				</div>
 			</div>
 			
