@@ -5,7 +5,6 @@
   <title>Про нас</title>
   <?php include("blocks/header_links.php") ;?>   
 </head>
-
 <body>
   <header>
     <?php include("blocks/header.php") ;?>
