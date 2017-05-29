@@ -115,7 +115,7 @@ a:hover {
 }
 
 .menu {
-	font-size:25px !important;
+	font-size:15px !important;
 	float:right;
 	text-transform:uppercase;
 	font-weight:700;	
@@ -1208,7 +1208,7 @@ ul.sidebar-gallery {
 }
 
 a.scrollup{
-    color:#fff;
+  color:#fff;
 	height:40px;
 	width:40px;
 	font-size:12px;
