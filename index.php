@@ -182,7 +182,7 @@
             <!-- <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="images/partners/partner1.png"></a> -->
           </li>
           <li>
-            - <a href="#">Луганська область </a>
+            - <a href="units.php#lg">Луганська область </a>
             <br> - <a href="#">Харьківська область</a>
             <br> - <a href="#">Донецька область</a>
             <br> - <a href="#">Запорізька область</a>
