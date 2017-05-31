@@ -7,7 +7,7 @@
 						<li role="presentation"><a id="header_index"     href="index.php">Головна</a></li>
 						<li role="presentation"><a id="header_about"     href="about.php">Про нас</a></li>
 						<li role="presentation"><a id="header_units"     href="units.php">Підрозділи</a></li>								
-						<li role="presentation"><a id="header_portfolio" href="portfolio.php">Медіа</a></li>
+						<li role="presentation"><a id="header_portfolio" href="media.php">Медіа</a></li>
 						<li role="presentation"><a id="header_blog"      href="blog.php">Документи</a></li>
 						<li role="presentation"><a id="header_contact"   href="contact.php">Контакти</a></li>						
 						<li role="presentation"><a id="header_anons"     href="anons.php">Анонс</a></li>						
