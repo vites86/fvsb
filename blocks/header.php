@@ -19,7 +19,7 @@
 						<li role="presentation"><a id="header_index"     href="index.php">Головна</a></li>
 						<li role="presentation"><a id="header_about"     href="about.php">Про нас</a></li>
 						<li role="presentation"><a id="header_units"     href="units.php">Підрозділи</a></li>								
-						<li role="presentation"><a id="header_portfolio" href="portfolio.php">Медіа</a></li>
+						<li role="presentation"><a id="header_media"     href="media.php">Медіа</a></li>
 						<li role="presentation"><a id="header_blog"      href="blog.php">Документи</a></li>
 						<li role="presentation"><a id="header_contact"   href="contact.php">Контакти</a></li>						
 						<li role="presentation"><a id="header_anons"     href="anons.php">Анонс</a></li>						
@@ -30,7 +30,7 @@
            document.getElementById("header_index").className = '';
            document.getElementById("header_about").className = '';
            document.getElementById("header_units").className = '';
-           document.getElementById("header_portfolio").className = '';
+           document.getElementById("header_media").className = '';
            document.getElementById("header_blog").className = '';
            document.getElementById("header_contact").className = '';
            document.getElementById("header_anons").className = '';
