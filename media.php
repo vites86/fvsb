@@ -44,7 +44,7 @@
                             <img class="img-responsive" src="images/news/1.png" alt="">
                             <div class="overlay">
                                 <div class="recent-work-inner">
-                                    <h3><a href="#">Чемпіонат України 2017</a></h3>
+                                    <h4><a href="#">Чемпіонат України 2017</a></h4>
                                     <p>12-14 травня 2017 у м. Харкові пройшов Чемпіонат України</p>
                                     <a class="preview" href="images/news/1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                                 </div> 
@@ -57,9 +57,9 @@
                             <img class="img-responsive" src="images/news/2.png" alt="">
                             <div class="overlay">
                                 <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
+                                    <h4><a href="#">Спартакіада молоді</a></h4>
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="news/2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                    <a class="preview" href="images/news/2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                                 </div> 
                             </div>
                         </div>          
