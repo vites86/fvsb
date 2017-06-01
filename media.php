@@ -18,7 +18,7 @@
 		<div class="container">	
 			<div class="breadcrumb">							
 				<li><a href="index.html">Головна</a></li>
-				<li>Медіа</li>			
+				<li>Фото</li>			
 			</div>		
 		</div>	
 	</div>	
@@ -26,14 +26,14 @@
 	<section id="portfolio">	
         <div class="container">
             <div class="center">
-               <p>Пропунуємо Вашій увазі збірку медіа-файлів Всеукраїнської Федерації Військово-спортивних багатоборств</p>
+               <p>Пропунуємо Вашій увазі збірку Фото Всеукраїнської Федерації Військово-спортивних багатоборств</p>
             </div>
 
             <ul class="portfolio-filter text-center">
-                <li><a class="btn btn-default active" href="#" data-filter="*">Усі файли</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Відео</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".html">Фото</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Інше</a></li>
+                <li><a class="btn btn-default active" href="#" data-filter="*">Усі фото</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Змагання</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".html">Збори</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Семінари</a></li>
             </ul><!--/#portfolio-filter-->
 		</div>
 		<div class="container">
