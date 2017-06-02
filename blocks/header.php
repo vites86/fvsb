@@ -9,7 +9,7 @@
 						<li role="presentation"><a id="header_units"     href="units.php">Підрозділи</a></li>								
 						<li role="presentation"><a id="header_media"     href="media.php">Медіа</a></li>
 						<li role="presentation"><a id="header_blog"      href="blog.php">Документи</a></li>
-						<li role="presentation"><a id="header_contact"   href="contact.php">Контакти</a></li>						
+						<li role="presentation"><a id="header_contact"   href="contacts.php">Контакти</a></li>						
 						<li role="presentation"><a id="header_anons"     href="anons.php">Анонс</a></li>						
 						<li role="presentation"><a id="header_news"      href="news.php">Новини</a></li>						
 					</ul>
