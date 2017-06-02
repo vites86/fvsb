@@ -46,7 +46,7 @@
                                 <div class="recent-work-inner">
                                     <h4><a href="#">Чемпіонат України 2017</a></h4>
                                     <p>12-14 травня 2017 у м. Харкові пройшов Чемпіонат України</p>
-                                    <a class="preview" href="images/news/1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                    <a class="preview" href="images/news/1/1_full.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                                 </div> 
                             </div>
                         </div>
