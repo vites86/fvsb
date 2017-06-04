@@ -29,7 +29,7 @@
 	
 	<div class="services">
 		<div class="container">
-			<h3>Президент Федерації</h3>
+			<h3>Президент Всеукраїнської Федерації військово-спортивних багатоборств</h3>
 			<hr>
 			<div class="col-md-3">
 				<img src="images/zaicev.jpg" class="img-responsive" style="width:100%">
@@ -40,7 +40,7 @@
 					<ul>                        
                         <li>
 							<div class="media-left">
-								<i class="fa fa-user"></i>						
+								<i class="fa fa-user" style="padding-left:5px; padding-right:5px;"></i>						
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">Зайцев Сергій Васильович</h4>
@@ -48,7 +48,23 @@
 						</li>
 						<li>
 							<div class="media-left">
-								<i class="fa fa-pencil"></i>						
+								<i class="fa fa-credit-card" ></i>						
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Майстер спорту України</h4>
+							</div>
+						</li>
+						<li>
+							<div class="media-body">
+								<i class="fa fa-tag" style="padding-left:5px; padding-right:10px;"></i>						
+							</div>
+							<div class="media-left">
+								<h4 class="media-heading">Чорний пояс 10-й дан ВСБ</h4>
+							</div>
+						</li>
+						<li>
+							<div class="media-left">
+								<i class="fa fa-phone" style="padding-left:5px; padding-right:5px;"></i>						
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">(063) 1119 57 15</h4>
@@ -56,7 +72,7 @@
 						</li>
 						<li>
 							<div class="media-left">
-								<i class="fa fa-envelope-o"></i>						
+								<i class="fa fa-envelope-o" style=" padding-right:3px;"></i>						
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">president.fvsb@gmail.com</h4>
@@ -64,7 +80,7 @@
 						</li>
 						<li>
 							<div class="media-left">
-								<i class="fa fa-globe"></i>						
+								<i class="fa fa-globe" style="padding-left:2px; padding-right:7px;"></i>						
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading"><a href="#" target="_blank">fvsb.ua</a></h4>
@@ -75,9 +91,71 @@
 			</div>
 		</div>
 	</div>	
-	
-	<div class="sub-services">		
-	</div>
+	<div class="sub-services">
+		<div class="container">
+			<h3>Віце - Президент Всеукраїнської Федерації військово-спортивних багатоборств</h3>
+			<hr>
+			<div class="col-md-3">
+				<img src="images/fedorcov.jpg" class="img-responsive" style="width:100%">
+			</div>
+			
+			<div class="col-md-9">
+				<div class="media">
+					<ul>                        
+                        <li>
+							<div class="media-left">
+								<i class="fa fa-user" style="padding-left:5px; padding-right:5px;"></i>						
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Федорцов Олександр Петрович</h4>
+							</div>
+						</li>
+						<li>
+							<div class="media-left">
+								<i class="fa fa-credit-card" ></i>						
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Суддя міжнародної категорії</h4>
+							</div>
+						</li>
+						<li>
+							<div class="media-body">
+								<i class="fa fa-tag" style="padding-left:5px; padding-right:10px;"></i>						
+							</div>
+							<div class="media-left">
+								<h4 class="media-heading">Чорний пояс 8-й дан ВСБ</h4>
+							</div>
+						</li>
+						<li>
+							<div class="media-left">
+								<i class="fa fa-phone" style="padding-left:5px; padding-right:5px;"></i>						
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">(057) 343-67-76, (066) 748-76-81 (мобильный)</h4>
+							</div>
+						</li>
+						<li>
+							<div class="media-left">
+								<i class="fa fa-envelope-o" style=" padding-right:3px;"></i>						
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">vicepresident.msvsm@gmail.com</h4>
+							</div>
+						</li>
+						<li>
+							<div class="media-left">
+								<i class="fa fa-globe" style="padding-left:2px; padding-right:7px;"></i>						
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading"><a href="#" target="_blank">fvsb.ua</a></h4>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>	
+
 	
 	
 	<footer>
