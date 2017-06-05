@@ -21,11 +21,7 @@
 				<li>Контакти</li>			
 			</div>		
 		</div>	
-	</div>
-
-	
-
-	  
+	</div>	  
 	
 	<div class="services">
 		<div class="container">
@@ -154,9 +150,7 @@
 				</div>
 			</div>
 		</div>
-	</div>	
-
-	
+	</div>		
 	
 	<footer>
 		   <? include("blocks/footer.php"); ?>
