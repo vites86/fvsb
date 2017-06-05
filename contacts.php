@@ -67,7 +67,7 @@
 								<i class="fa fa-phone" style="padding-left:5px; padding-right:5px;"></i>						
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading">(063) 1119 57 15</h4>
+								<h4 class="media-heading">(063) 119 57 15</h4>
 							</div>
 						</li>
 						<li>
