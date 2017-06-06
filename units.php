@@ -30,8 +30,9 @@
 	   {
            while( $myrow = mysqli_fetch_assoc($result) )
 		   { 
+			   $bckgnd_class = $myrow['id'] % 2 == 0 ? "sub-services" : "services"; 
                 printf("<a name='%s'></a>
-				        <div class='services'>
+				        <div class='%s'>
 	                        <div class='container'>
 	                        	<h3>%s</h3>
 	                        	<hr>
@@ -84,7 +85,7 @@
 	                        	</div>
 	                        </div>
 	                    </div>
-						<hr style='color:black !important;line-height: 4px;'>",  $myrow['short_name'], $myrow['region'],$myrow['short_name'], $myrow['short_name'], $myrow['head'], $myrow['telephone'], $myrow['email'], $myrow['web_adress'], $myrow['web_adress']); 
+						<hr style='color:black !important;line-height: 4px;'>",  $myrow['short_name'], $bckgnd_class, $myrow['region'],$myrow['short_name'], $myrow['short_name'], $myrow['head'], $myrow['telephone'], $myrow['email'], $myrow['web_adress'], $myrow['web_adress']); 
            } 
            mysqli_free_result($result); 
 	   }

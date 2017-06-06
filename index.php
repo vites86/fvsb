@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>ВСБ</title>
   <?php include("blocks/header_links.php") ;?>
 </head>
-
 <body>
   <header>
       <?php include("blocks/header.php"); ?>
@@ -15,14 +13,12 @@
                       var display = getComputedStyle(el).display;
                       el.style.display = display === 'none' ? 'block' : 'none';                     
                    // alert("08.10.2010 року ВФВСБ наказом № 3531 Міністерства України у справах молоді, сім'ї та спорту присвоєно статус <b>«Національної»</b>", this);
-               }
-                    
+               }                    
                $(window).load(function(){   
                   document.getElementById("header_index").className = 'active';          
              }); 
       </script>
   </header>
-
   <section id="main-slider" class="no-margin">
     <div class="carousel slide">
       <div class="carousel-inner">
@@ -37,7 +33,9 @@
                   <img style="width:45%;" src="images/logo.png" />
                   <br>
                   <br>
-                  <span id='status' style="display:none">08.10.2010 року ВФВСБ наказом № 3531 Міністерства України у справах молоді, сім'ї та спорту присвоєно статус <b>«Національної»</b></span>
+                  <span id='status' style="display:none">
+                     08.10.2010 року ВФВСБ наказом № 3531 Міністерства України у справах молоді, сім'ї та спорту присвоєно статус <b>«Національної»</b>
+                  </span>
                   <input type="button" onclick="showStatus()" value="Статус федерації" class="btn-slide animation animated-item-3 btn btn-success" href="#"></input>
                 </div>
               </div>
@@ -66,14 +64,7 @@
 
         <div class="col-md-6">
           <div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <!-- <h2>Бойове двоборство:</h2>
-<ul type="none" style="color:black; text-align: left; ">
-<li>- стрільба з пневматичної гвинтівки</li>
-<li>- всестильовий бій <em style="color: grey">(раціональне поєднання ударів руками, ногами, ліктями, колінами, боротьби(кидки, больові і задушливі прийоми)</em></li>
-<li><img style="width: 100%;margin-top: 15px;" src="images/slider/dvoborstvo.png"></li>
-</ul> -->
             <img style="width: 100%;margin-top: 15px;" src="images/slider/dvoborstvo.png">
-
           </div>
         </div>
         <div class="col-md-6">
@@ -98,25 +89,31 @@
       <div class="col-md-6 wow fadeInDown justif" data-wow-duration="1000ms" data-wow-delay="300ms">
         <h2>Про нас</h2>
         <img src="images/world.png" class="img-responsive" />
-        <p>Громадська організація "Всеукраїнська Федерація військово-спортивних багатоборств" <b>(ВФВСБ)</b> створена 8 лютого 2000 року на базі Федерації військово-прикладного спорту Харківської області (зареєстрована 31.01.1997)
+        <p> Громадська організація "Всеукраїнська Федерація військово-спортивних багатоборств" <b>(ВФВСБ)</b> створена 8 лютого 2000 року 
+            на базі Федерації військово-прикладного спорту Харківської області (зареєстрована 31.01.1997).
         </p>
-        <p>08.10.2010 року ВФВСБ наказом № 3531 Міністерства України у справах молоді, сім'ї та спорту присвоєно статус <b>«Національної»</b>.
+        <p> 08.10.2010 року ВФВСБ наказом № 3531 Міністерства України у справах молоді, сім'ї та спорту присвоєно статус <b>«Національної»</b>. 
+            В подальшому статус «Національної» був продовжений згідно наказу Міністерства молоді та спорту України №2385 від 18.07.2014 року.
         </p>
-        <p>У 2005 році ВФВСБ стала одним із засновників Міжнародного Союзу громадських організацій «Розвитку військово-спортивних багатоборства», президентом якого став <b>Зайцев С.В.</b> (Засновник бойового багатоборства, заслужений тренер України, суддя
-          міжнародної категорії, чорний пояс 10 дан, майстер спорту), першим віце-президентом став Федорцов А.П. - Засновник бойового багатоборства, суддя міжнародної категорії, чорний пояс 8 дан), другим віце-президентом став Самсонов В.
+        <p> У 2005 році ВФВСБ стала одним із засновників Міжнародного Союзу громадських організацій «Розвитку військово-спортивних багатоборства», 
+            президентом якого став <b>Зайцев С.В.</b> (Засновник бойового багатоборства, заслужений тренер України, суддя
+            міжнародної категорії, чорний пояс 10 дан, майстер спорту), першим віце-президентом став Федорцов А.П. - 
+            Засновник бойового багатоборства, суддя міжнародної категорії, чорний пояс 8 дан.
         </p>
       </div>
 
       <div class="col-md-6 wow fadeInDown justif" data-wow-duration="1000ms" data-wow-delay="600ms">
         <h2><br></h2>
-        <p>Основна мета діяльності організації – військово-патріотичне виховання дітей та молоді, пропаганда здорового способу життя, підвищення громадянської активності дітей та молоді, забезпечення їх доступу до участі у державотворчих процесах, залучення
-          дітей та молоді до культурного життя України та сприяння проведенню державних, народних і традиційних свят за їх участю, сприяння розвитку лідерських якостей у дітей та молоді, сприяння підготовці молоді до служби у лавах Збройних Сил України.</p>
-        <p>Спортсмени, які займаються цим видом спорту, мають можливість брати участь:
-          <br> - У поясний атестації міжнародної Федерації
-          <br> - У районних, обласних, національних, міжнародних змаганнях та отримувати відповідні <b>спортивні розряди</b> і <b>звання</b>
-          <br> - У літніх спортивних таборах
-          <br> - У військово-патріотичних іграх
-          <br>
+        <p> Основна мета діяльності організації – задоволення та захист законних соціальних, економічних, творчих, спортивних та інших спільних 
+            інтересів членів Організації та сприяння розвитку військово-спортивних багатоборств на території України, підвищенню ролі цього виду 
+            спорту у всебічному і гармонійному розвитку особистості, зміцнення здоров'я, формування здорового способу життя. Військово-патріотичне 
+            виховання дітей та молоді, пропаганда здорового способу життя і сприяння підготовці молоді до служби у лавах Збройних Сил України.</p>
+        <p> Спортсмени, які займаються цим видом спорту, мають можливість брати участь:
+        <br> - У технічній поясовій атестації згідно <a style="color:darkblue;text-decoration:underline" href="documents/mezhdunarodnoe_polozhenie_o_tpa_utverzhdenoe_15.06.2011.doc">положення</a> відповідної міжнародної організаціїї 
+        <br> - У районних, обласних, національних, міжнародних змаганнях та отримувати відповідні <b>спортивні розряди</b> і <b>звання</b>
+        <br> - У літніх спортивних таборах
+        <br> - У військово-патріотичних заходах
+        <br>
         </p>
         <p>ВФВСБ на даний момент підготовлені:
           <br> - Заслужених тренерів України - 9 осіб;
@@ -126,8 +123,8 @@
           <br>
         </p>
         <p>В процесі роботи ВФВСБ були підготовлені:
-          <br> - 7 суддів міжнародної категорії;
-          <br> - 5 суддів Національної категорії;
+          <br> - 10 суддів міжнародної категорії;
+          <br> - 9 суддів Національної категорії;
           <br> - І більше 150 суддів 1-3 їх категорій.
         </p>
       </div>
@@ -135,30 +132,11 @@
   </div>
 
   <div class="lates">
-    <div class="container">
+    <div class="container" style="text-align:center">
       <div class="text-center">
         <h2>Останні Новини</h2>
       </div>
-      <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-        <img src="images/news/1.png" class="img-responsive" />
-        <h3>Чемпіонат України 2017 року</h3>
-        <p>З 12.05.2017 по 14.05.2107 в м.Харків проводився Чемпіонат України з військово-спортивних багатоборств, розділ "Бойове двоборство".
-        </p>
-      </div>
-
-      <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-        <img src="images/news/1.png" class="img-responsive" />
-        <h3>Чемпіонат України 2017 року</h3>
-        <p>З 12.05.2017 по 14.05.2107 в м.Харків проводився Чемпіонат України з військово-спортивних багатоборств, розділ "Бойове двоборство".
-        </p>
-      </div>
-
-      <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-        <img src="images/news/1.png" class="img-responsive" />
-        <h3>Чемпіонат України 2017 року</h3>
-        <p>З 12.05.2017 по 14.05.2107 в м.Харків проводився Чемпіонат України з військово-спортивних багатоборств, розділ "Бойове двоборство".
-        </p>
-      </div>
+        <? include("blocks/news.php"); ?>      
     </div>
   </div>
 
@@ -166,7 +144,7 @@
     <div class="container">
       <div class="center wow fadeInDown">
         <h2>Наші підрозділи</h2>
-        <p>В даний час ВФВСБ має свої структурні підрозділи в 15 областях України.</p>
+        <p>В даний час ВФВСБ має свої структурні підрозділи в 17 областях України.</p>
         <br>
         <br>
       </div>
@@ -176,41 +154,35 @@
           <li>
             - <a href="units.php#tnp">Тернопільська область</a>
             <br> - <a href="units.php#chk">Черкаська область</a>
-            <br> - <a href="units.php#lv">Львівська область </a>
-            <br> - <a href="units.php#pl">Полтавська область </a>
+            <br> - <a href="units.php#lv">Львівська область </a>            
+            <br> - <a href="#">Одесська область </a>
             <br>
             <!-- <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="images/partners/partner1.png"></a> -->
           </li>
           <li>
-            - <a href="#">Луганська область </a>
+            - <a href="units.php#lg">Луганська область </a>
             <br> - <a href="#">Харьківська область</a>
             <br> - <a href="#">Донецька область</a>
-            <br> - <a href="#">Запорізька область</a>
+            <br> - <a href="units.php#khm">Хмельницька область </a>
             <br>
             <!-- <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="images/partners/partner2.png"></a> -->
           </li>
           <li>- <a href="units.php#dnr">Дніпропетровська область</a>
-            <br> - <a href="#">Сумська область</a>
+            <br> - <a href="units.php#sm">Сумська область</a>
             <br> - <a href="#">Чернігівська область  </a>
-            <br> - <a href="units.php#kv">Київська область </a>
             <br>
             <!-- <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="images/partners/partner3.png"></a></li> -->
           </li>
           <li>- <a href="units.php#krg">Кропивницька область</a>
-            <br> - <a href="#">Херсонська область</a>
-            <br> - <a href="#">Житомирська область</a>
-            <br> - <a href="#">Одесська область </a>
-            <br> - <a href="#">Хмельницька область </a>
+            <br> - <a href="units.php#khs">Херсонська область</a>
+            <br> - <a href="units.php#zht">Житомирська область</a>
             <br>
             <!-- <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/partner4.png"></a> -->
           </li>
-          <li>
-            - <a href="units.php#khs">Херсонська область</a>
-            <br> - <a href="#">Одеська область</a>
-            <br> - <a href="#">Кіровоградська область </a>
-            <br> - <a href="#">Луганська область</a>
+          <li>- <a href="units.php#pl">Полтавська область </a>
+            <br> - <a href="#">Запорізька область</a>
+            <br> - <a href="units.php#kv">Київська область </a>
             <br>
-            <!-- <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="images/partners/partner5.png"></a> -->
           </li>
         </ul>
       </div>
@@ -225,40 +197,7 @@
         <div class="col-md-7">
           <div class="center wow fadeInDown">
             <h2>Анонс подій</h2>
-            <div class="tt-panel" style="display: block;">
-              <ul class="skr">
-                <li class='tcarusel-item'>
-
-                  <img class='news_img' src="images/events/1.jpg" alt='%s' tooltip='%s'>
-                  <a href='events.php?id=%s&page=1'><b>Дата</b> // Місто //   <br>Заголовок події 1
-</a>
-                </li>
-                <li class='tcarusel-item'>
-                  <a href='events.php?id=%s&page=1'>
-                    <img class='news_img' src='images/events/1.jpg' alt='%s' tooltip='%s'>
-                    <br>
-                    <b>Дата</b> // Місто //
-                    <br>Заголовок події 1
-                  </a>
-                </li>
-                <li class='tcarusel-item'>
-                  <a href='events.php?id=%s&page=1'>
-                    <img class='news_img' src='images/events/1.jpg' alt='%s' tooltip='%s'>
-                    <br>
-                    <b>Дата</b> // Місто //
-                    <br>Заголовок події 1
-                  </a>
-                </li>
-                <li class='tcarusel-item'>
-                  <a href='events.php?id=%s&page=1'>
-                    <img class='news_img' src='images/events/1.jpg' alt='%s' tooltip='%s'>
-                    <br>
-                    <b>Дата</b> // Місто //
-                    <br>Заголовок події 1
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <? include("blocks/anons.php"); ?>
           </div>
         </div>
         <div class="col-md-5">
@@ -266,8 +205,8 @@
             <h2>Контакти</h2>
             <ul class="contacts">
               <li>Президент федерації: Зайцев Сергій Васильович</li>
-              <li>тел.: ххх - ххх - ххх</li>
-              <li>email: email@ukr.net</li>
+              <li>тел.: (063) 119 57 15</li>
+              <li>email: president.fvsb@gmail.com</li>
               <li>адреса: м. Харків</li>
             </ul>
           </div>

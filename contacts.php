@@ -9,7 +9,7 @@
 		  <?php include("blocks/header.php"); ?>
 	<script>
         $(window).load(function(){   
-           document.getElementById("header_units").className = 'active';
+           document.getElementById("header_contact").className = 'active';
         });
       </script>
 	</header>
