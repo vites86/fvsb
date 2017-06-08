@@ -58,7 +58,7 @@
 	                        				</li>
 	                        				<li>
 	                        					<div class='media-left'>
-	                        						<i class='fa fa-pencil'></i>						
+	                        						<i class='fa fa-phone'></i>						
 	                        					</div>
 	                        					<div class='media-body'>
 	                        						<h4 class='media-heading'>%s</h4>

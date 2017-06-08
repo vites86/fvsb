@@ -55,6 +55,7 @@ INSERT INTO `units` VALUES
 (11,'zht','Житомирська область','Ратошнюк Віктор Іванович','КМСУ','(098) 420 34 98','viktor.ratoshnyuk@ukr.net','viktor.ratoshnyuk@ukr.net'),
 (12,'sm','Сумська область','Лата Олег','','(050) 463 13 45','latabig@ukr.net','latabig@ukr.net');
 (13,'od','Одеська область','Судець Сергій Володимирович','','(093) 289 83 27','sergej-sudec@ukr.net','http://msac.od.ua');
+(14,'zp','Запорізька область','Грiмов Сергій Анатолійович','','(066) 422 75 27','grimov-sergeyy@rambler.ua','grimov-sergeyy@rambler.ua');
 
 /*!40000 ALTER TABLE `units` ENABLE KEYS */;
 UNLOCK TABLES;

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <?php include("blocks/header_links.php"); ?>  
-    <title>Підрозділи</title>   
+    <title>Контакти</title>   
   </head>
   <body>
 	<header>		
@@ -28,7 +28,7 @@
 			<h3>Президент Всеукраїнської Федерації військово-спортивних багатоборств</h3>
 			<hr>
 			<div class="col-md-3">
-				<img src="images/zaicev.jpg" class="img-responsive" style="width:100%">
+				<img src="images/zaicev.png" class="img-responsive" style="width:100%">
 			</div>
 			
 			<div class="col-md-9">
@@ -92,7 +92,7 @@
 			<h3>Віце - Президент Всеукраїнської Федерації військово-спортивних багатоборств</h3>
 			<hr>
 			<div class="col-md-3">
-				<img src="images/fedorcov.jpg" class="img-responsive" style="width:100%">
+				<img src="images/fedorcov.png" class="img-responsive" style="width:100%">
 			</div>
 			
 			<div class="col-md-9">
