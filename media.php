@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <?php include("blocks/header_links.php"); ?>  
-    <title>Підрозділи</title>   
+  <head>   
+    <title>Фото</title>
+    <?php include("blocks/header_links.php") ;?>
   </head>
   <body>
 	<header>		
-		  <?php include("blocks/header.php"); ?>
-	<script>
-        $(window).load(function(){   
-           document.getElementById("header_media").className = 'active';
-        });
+		 <?php include("blocks/header.php"); ?>
+      <script>
+               function showStatus() {   
+                      var el = document.getElementById('status');
+                      var display = getComputedStyle(el).display;
+                      el.style.display = display === 'none' ? 'block' : 'none';                     
+                   // alert("08.10.2010 року ВФВСБ наказом № 3531 Міністерства України у справах молоді, сім'ї та спорту присвоєно статус <b>«Національної»</b>", this);
+               }                    
+               $(window).load(function(){   
+                  document.getElementById("header_media").className = 'active';          
+             }); 
       </script>
 	</header>
 	
@@ -18,81 +24,49 @@
 		<div class="container">	
 			<div class="breadcrumb">							
 				<li><a href="index.html">Головна</a></li>
-<<<<<<< HEAD
-				<li>Медіа</li>			
-=======
 				<li>Фото</li>			
->>>>>>> contacts
 			</div>		
 		</div>	
-	</div>	
+	</div>
 	
 	<section id="portfolio">	
         <div class="container">
             <div class="center">
-<<<<<<< HEAD
                <p>Пропунуємо Вашій увазі збірку медіа-файлів Всеукраїнської Федерації Військово-спортивних багатоборств</p>
             </div>
 
             <ul class="portfolio-filter text-center">
-                <li><a class="btn btn-default active" href="#" data-filter="*">Усі файли</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Відео</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".html">Фото</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Інше</a></li>
-=======
-               <p>Пропунуємо Вашій увазі збірку Фото Всеукраїнської Федерації Військово-спортивних багатоборств</p>
-            </div>
-
-            <ul class="portfolio-filter text-center">
-                <li><a class="btn btn-default active" href="#" data-filter="*">Усі фото</a></li>
+                <li><a class="btn btn-default active" href="#" data-filter="*">Усі альбоми</a></li>
                 <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Змагання</a></li>
                 <li><a class="btn btn-default" href="#" data-filter=".html">Збори</a></li>
                 <li><a class="btn btn-default" href="#" data-filter=".wordpress">Семінари</a></li>
->>>>>>> contacts
             </ul><!--/#portfolio-filter-->
 		</div>
 		<div class="container">
-            <div class="">
+            <div style="text-align:center;">
                 <div class="portfolio-items">
                     <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
                         <div class="recent-work-wrap">
-<<<<<<< HEAD
-                            <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-=======
+                            <a class="news_link" href="#" rel="">
                             <img class="img-responsive" src="images/news/1.png" alt="">
                             <div class="overlay">
                                 <div class="recent-work-inner">
-                                    <h4><a href="#">Чемпіонат України 2017</a></h4>
+                                    <h4>Чемпіонат України 2017</h4>
                                     <p>12-14 травня 2017 у м. Харкові пройшов Чемпіонат України</p>
-                                    <a class="preview" href="images/news/1/1_full.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
->>>>>>> contacts
                                 </div> 
                             </div>
+                            </a>
                         </div>
                     </div><!--/.portfolio-item-->
 
-                    <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
+                    <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3 media_mrg">
                         <div class="recent-work-wrap">
-<<<<<<< HEAD
                             <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
                             <div class="overlay">
                                 <div class="recent-work-inner">
                                     <h3><a href="#">Business theme</a></h3>
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
                                     <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-=======
-                            <img class="img-responsive" src="images/news/2.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h4><a href="#">Спартакіада молоді</a></h4>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/news/2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
->>>>>>> contacts
                                 </div> 
                             </div>
                         </div>          
@@ -178,12 +152,11 @@
                 </div>
             </div>
         </div>
-    </section><!--/#portfolio-item-->	
+    </section><!--/#portfolio-item-->
+	
 
 	<footer>
-		   <? include("blocks/footer.php"); ?>
+		 <? include("blocks/footer.php"); ?>
 	</footer>
-		   <? include("blocks/footer_links.php"); ?>  
-    
 </body>
 </html>

@@ -1301,3 +1301,10 @@ a.scrollup:hover{
 .align_cntr{
   text-align: center !important;
 }
+.media_mrg{
+  padding: 0 7px 0 0;
+}
+.news_link a:hover{
+  color: lawngreen !important;
+  text-decoration: underline;
+}
