@@ -18,12 +18,12 @@
 					<ul class="nav nav-tabs" role="tablist">
 						<li role="presentation"><a id="header_index"     href="index.php">Головна</a></li>
 						<li role="presentation"><a id="header_about"     href="about.php">Про нас</a></li>
-						<li role="presentation"><a id="header_units"     href="units.php">Підрозділи</a></li>								
-						<li role="presentation"><a id="header_media"     href="media.php">Медіа</a></li>
+						<li role="presentation"><a id="header_units"     href="units.php">Підрозділи</a></li>	
 						<li role="presentation"><a id="header_blog"      href="blog.php">Документи</a></li>
+						<li role="presentation"><a id="header_news"      href="news.php">Новини</a></li>							
+						<li role="presentation"><a id="header_media"     href="media.php">Фото</a></li>
+						<li role="presentation"><a id="header_anons"     href="anons.php">Події</a></li>						
 						<li role="presentation"><a id="header_contact"   href="contacts.php">Контакти</a></li>						
-						<li role="presentation"><a id="header_anons"     href="anons.php">Анонс</a></li>						
-						<li role="presentation"><a id="header_news"      href="news.php">Новини</a></li>						
 					</ul>
 					<script>
         $(window).load(function(){   

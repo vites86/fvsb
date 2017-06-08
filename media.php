@@ -37,15 +37,19 @@
 
             <ul class="portfolio-filter text-center">
                 <li><a class="btn btn-default active" href="#" data-filter="*">Усі альбоми</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Змагання</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".html">Збори</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".html">Змагання</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".joomla">Збори</a></li>
                 <li><a class="btn btn-default" href="#" data-filter=".wordpress">Семінари</a></li>
             </ul><!--/#portfolio-filter-->
 		</div>
+
 		<div class="container">
             <div style="text-align:center;">
+
+            <!--apps(усі) html(змагання) wordpress(семінари) joomla(збори)  bootstrap-->
+
                 <div class="portfolio-items">
-                    <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
+                    <div class="portfolio-item html col-xs-12 col-sm-4 col-md-3">
                         <div class="recent-work-wrap">
                             <a class="news_link" href="#" rel="">
                             <img class="img-responsive" src="images/news/1.png" alt="">
@@ -59,39 +63,50 @@
                         </div>
                     </div><!--/.portfolio-item-->
 
-                    <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3 media_mrg">
+                    <div class="portfolio-item html col-xs-12 col-sm-4 col-md-3 media_mrg">
                         <div class="recent-work-wrap">
                             <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
                             <div class="overlay">
                                 <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                    <h3><a href="#">Чемпіонат світу 2016</a></h3>
+                                    <p>З 18 по 20 листопада 2016 року в місті Харкові відбувся 11-й Чемпіонат Світу</p>
                                 </div> 
                             </div>
                         </div>          
                     </div><!--/.portfolio-item-->
 
-                    <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
+                     <div class="portfolio-item wordpress col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item6.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Національний семінар 2016</a></h3>
+                                    <p>28 серпня 2016 року у м.Харькові було проведено Національний семінар для Інструкторів по ВСБ</p>
+                                </div> 
+                            </div>
+                        </div>         
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item html col-xs-12 col-sm-4 col-md-3">
                         <div class="recent-work-wrap">
                             <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
                             <div class="overlay">
                                 <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <h3><a href="#">Кубок України 2016</a></h3>
+                                    <p>8 жовтня 2016 в м. Одеса відбувся Кубок України пам`яті Героя України Генерал-майора Кульчицького Сергія Петровича</p>
                                     <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                                 </div> 
                             </div>
                         </div>        
                     </div><!--/.portfolio-item-->
 
-                    <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3">
+                    <div class="portfolio-item joomla col-xs-12 col-sm-4 col-md-3">
                         <div class="recent-work-wrap">
                             <img class="img-responsive" src="images/portfolio/recent/item4.png" alt="">
                             <div class="overlay">
                                 <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <h3><a href="#">Національні літні збори 2016</a></h3>
+                                    <p>В Херсонській області смт.Лазурне було провдено 10-дені національні збори</p>
                                     <a class="preview" href="images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                                 </div> 
                             </div>
@@ -109,20 +124,7 @@
                                 </div> 
                             </div>
                         </div>      
-                    </div><!--/.portfolio-item-->
-
-                    <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item6.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                    <a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                                </div> 
-                            </div>
-                        </div>         
-                    </div><!--/.portfolio-item-->
+                    </div><!--/.portfolio-item-->                   
 
                     <div class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-3">
                         <div class="recent-work-wrap">
