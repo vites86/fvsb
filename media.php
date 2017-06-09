@@ -45,10 +45,43 @@
 
 		<div class="container">
             <div style="text-align:center;">
-
+                <div class="portfolio-items">
             <!--apps(усі) html(змагання) wordpress(семінари) joomla(збори)  bootstrap-->
 
-                <div class="portfolio-items">
+    <? include("blocks/db.php");
+       if ($result = mysqli_query($db, 'SELECT * FROM news ORDER BY id')) 
+	   {
+           while( $myrow = mysqli_fetch_assoc($result) )
+		   {
+               if ($myrow['category_id']=="1") $category="html";
+               if ($myrow['category_id']=="2") $category="joomla";
+               if ($myrow['category_id']=="3") $category="wordpress";
+
+             printf(" <div class='portfolio-item %s col-xs-12 col-sm-4 col-md-3'>
+                          <div class='recent-work-wrap'>
+                            <a class='news_link' href='gallery.php?id=%s' rel=''>
+                              <img class='img-responsive' src='images/news/%s.png' alt=''>
+                              <div class='overlay'>
+                                <div class='recent-work-inner'>
+                                    <h4>%s</h4>
+                                    <p>%s</p>
+                                </div> 
+                              </div>
+                            </a>
+                        </div>
+                    </div>", $category, $myrow['id'], $myrow['id'], $myrow['title'], $myrow['description']);
+             } 
+           mysqli_free_result($result); 
+	   }
+	   mysqli_close($db); 
+	?>
+           
+           
+           
+           
+           
+
+               
                     <div class="portfolio-item html col-xs-12 col-sm-4 col-md-3">
                         <div class="recent-work-wrap">
                             <a class="news_link" href="#" rel="">
@@ -63,7 +96,7 @@
                         </div>
                     </div><!--/.portfolio-item-->
 
-                    <div class="portfolio-item html col-xs-12 col-sm-4 col-md-3 media_mrg">
+                    <div class="portfolio-item html col-xs-12 col-sm-4 col-md-3">
                         <div class="recent-work-wrap">
                             <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
                             <div class="overlay">
