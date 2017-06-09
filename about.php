@@ -156,7 +156,7 @@
         </div>
         <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
           <img src="images/services/1.png" alt="">
-          <h4>Зацев Сергій Васильович</h4>
+          <h4>Зайцев Сергій Васильович</h4>
           <p>Президент Федерації
             <br> 10 дан
             <br>Майстер спорту України</p>
