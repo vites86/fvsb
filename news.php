@@ -49,7 +49,7 @@
             <!--apps(усі) html(змагання) wordpress(семінари) joomla(збори)  bootstrap-->
 
     <? include("blocks/db.php");
-       if ($result = mysqli_query($db, 'SELECT * FROM news ORDER BY id')) 
+       if ($result = mysqli_query($db, 'SELECT * FROM news ORDER BY date_ desc')) 
 	   {
            while( $myrow = mysqli_fetch_assoc($result) )
 		   {
