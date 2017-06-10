@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>   
-    <title>Фото</title>
+    <title>Новини</title>
     <?php include("blocks/header_links.php") ;?>
   </head>
   <body>
@@ -15,7 +15,7 @@
                    // alert("08.10.2010 року ВФВСБ наказом № 3531 Міністерства України у справах молоді, сім'ї та спорту присвоєно статус <b>«Національної»</b>", this);
                }                    
                $(window).load(function(){   
-                  document.getElementById("header_media").className = 'active';          
+                  document.getElementById("header_news").className = 'active';          
              }); 
       </script>
 	</header>
@@ -24,7 +24,7 @@
 		<div class="container">	
 			<div class="breadcrumb">							
 				<li><a href="index.html">Головна</a></li>
-				<li>Фото</li>			
+				<li>Новини</li>			
 			</div>		
 		</div>	
 	</div>
@@ -32,7 +32,7 @@
 	<section id="portfolio">	
         <div class="container">
             <div class="center">
-               <p>Пропунуємо Вашій увазі <b>фото-галерею</b> Всеукраїнської Федерації Військово-спортивних багатоборств</p>
+               <p>Пропунуємо Вашій увазі <b>новини</b> Всеукраїнської Федерації Військово-спортивних багатоборств</p>
             </div>
 
             <ul class="portfolio-filter text-center">
