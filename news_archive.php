@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>   
-    <title>Новини</title>                                                                                     
+  <head>          
+    <? $year = isset($_GET["year"]) ? $_GET["year"] : "%" ; ?>
+    <title>Архів<? if(isset($_GET["year"])) echo $year; else ""?> </title>
     <?php include("blocks/header_links.php") ;?>
   </head>
   <body>
@@ -18,20 +19,13 @@
                   document.getElementById("header_news").className = 'active';          
              }); 
       </script>
-     <? 
-       include("blocks/db.php");  
-       include("blocks/myclass.php"); 
-       $cat_id = isset($_GET["cat_id"]) ? $_GET["cat_id"] : "%" ;
-       if(isset($_GET["cat_id"])) $cat_name = Db::GetNewsCatName($cat_id);
-     ?>
 	</header>
 	
 	<div id="breadcrumb">
 		<div class="container">	
 			<div class="breadcrumb">							
 				<li><a href="index.html">Головна</a></li>
-				<li>Новини</li>		
-                <li><? echo $cat_name; ?></li>	
+				<li>Новини <? if(isset($_GET["year"])) echo " / Архів / ".$year; else " / Архів"?> </li>			
 			</div>		
 		</div>	
 	</div>
@@ -40,9 +34,10 @@
         <div class="blog">
             <div class="row">
                  <div class="col-md-8">
-    <?        
+    <? 
+       include("blocks/db.php");  
        $max_posts=3; 
-       $num_posts=mysqli_fetch_assoc(mysqli_query($db,"SELECT COUNT(*) FROM news where category_id like '$cat_id'"));
+       $num_posts=mysqli_fetch_assoc(mysqli_query($db,"SELECT COUNT(*) FROM news WHERE date_ LIKE '$year%'"));
        $num_posts = $num_posts["COUNT(*)"]; 
        $num_pages=ceil($num_posts/$max_posts);  
        if (isset($_GET['page']))  {$page=$_GET['page'];} else {$page=1;}
@@ -53,7 +48,8 @@
                                         cat.name, DATE_FORMAT(nws.date_,'%d.%m.%Y') as eurodate 
                                         FROM `news` as nws 
                                         left outer join news_category as cat 
-                                        on nws.category_id = cat.id  WHERE cat.id LIKE '$cat_id' order by date_ desc LIMIT ".($page-1)*$max_posts.",". $max_posts)) 
+                                        on nws.category_id = cat.id  
+                                        WHERE nws.date_ LIKE '$year%' order by date_ desc LIMIT ".($page-1)*$max_posts.",". $max_posts)) 
 	   {
            while( $myrow = mysqli_fetch_assoc($result) )
 		   {
@@ -91,11 +87,13 @@
                       <?php 
                            if ($page==1) $k=1;
                            else $k=$page-1;
-                           echo "<li><a href='news.php?page=$k'><i class='fa fa-long-arrow-left'></i>Попередня</a></li>";                      
-                           for($i=1; $i <= $num_pages; $i++) 
+                           echo "<li><a href='news_archive.php?page=$k&year=$year'><i class='fa fa-long-arrow-left'></i>Попередня</a></li>";                      
+                            for($i=1; $i <= $num_pages; $i++) 
                             	{
-                            		if ($page==$i) echo "<li><a class='active' href='news.php?page=$i'> $i </a></li>"; 
-                            		else           echo "<li><a href='news.php?page=$i'> $i </a></li>"; 
+                            		if ($page==$i) 
+                                    echo "<li><a class='active' href='news_archive.php?page=$i&year=$year'> $i </a></li>"; 
+                            		else
+                            		echo "<li><a href='news_archive.php?page=$i&year=$year'> $i </a></li>"; 
                             	}  	    		      	
                             // <li class="active"><a href="#">1</a></li>
                             // <li><a href="#">2</a></li>
@@ -104,7 +102,7 @@
                             // <li><a href="#">5</a></li>
                             if ($page>$num_pages) $page=$num_pages;
                             else $k = $k+1;
-                            echo "<li><a href='news.php?page=$k'>Наступна<i class='fa fa-long-arrow-right'></i></a></li>";
+                            echo "<li><a href='news_archive.php?page=$k&year=$year'>Наступна<i class='fa fa-long-arrow-right'></i></a></li>";
                         ?>
                     </ul><!--/.pagination-->
 
@@ -118,38 +116,6 @@
                         </form>
                     </div>
                     <!--/.search-->
-    				
-    				<!-- recent comments-->
-                    <!--<div class="widget categories">
-                        <h3>Recent Comments</h3>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="single_comments">
-                                    <img src="images/blog/avatar3.png" alt=""  />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                                    <div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span>
-                                    </div>
-                                </div>
-                                <div class="single_comments">
-                                    <img src="images/blog/avatar3.png" alt=""  />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                                    <div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span> 
-                                    </div>
-                                </div>
-                                <div class="single_comments">
-                                    <img src="images/blog/avatar3.png" alt=""  />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                                    <div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>                     
-                    </div>-->
-                    <!--/.recent comments-->
                      
                     <!-- categories-->
                     <div class="widget categories">
@@ -158,22 +124,19 @@
                             <div class="col-sm-6">
                                 <ul class="blog_category">
                                        <?
+                                           require_once("blocks/myclass.php");                                           
                                            if ($result = mysqli_query($db, "SELECT * from news_category")) 
                                        	   {
                                             while( $myrow = mysqli_fetch_assoc($result) )
                                        		  {        
                                                 $id = $myrow['id'];     
-                                                $news_count = Db::GetNewsCountFromCategory($id);                                             
-                                                printf("<li><a href='news.php?cat_id=%s'>%s <span class='badge'>%s</span></a></li>", $id, $myrow['name'], $news_count);
+                                                $news_count = Db::GetNewsCountFromCategoryByDate($id, $year);                                             
+                                                printf("<li><a href='news_archive.php?cat_id=%s&year=$year'>%s <span class='badge'>%s</span></a></li>", $id, $myrow['name'], $news_count);
                                               } 
                                             mysqli_free_result($result); 
                                        	    }
                                        	   mysqli_close($db); 
                                        ?>
-                                    <!--<li><a href="#">Computers <span class="badge">04</span></a></li>
-                                    <li><a href="#">Smartphone <span class="badge">10</span></a></li>
-                                    <li><a href="#">Gedgets <span class="badge">06</span></a></li>
-                                    <li><a href="#">Technology <span class="badge">25</span></a></li>-->
                                 </ul>
                             </div>
                         </div>                     
@@ -229,6 +192,6 @@
 	
 	<footer>
 		 <? include("blocks/footer.php"); ?>
-	</footer>	
+	</footer>
 </body>
 </html>
