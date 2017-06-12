@@ -1,0 +1,1 @@
+<a class='gallery'  rel='group' title='это фото 1' href='images/news/1.png'><img style='height:160px;' src='images/news/1.png' /></a>

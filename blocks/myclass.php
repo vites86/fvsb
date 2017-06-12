@@ -33,6 +33,14 @@
          return $name; 
        }
 
+       public static function GetNewsName($id)
+       {
+         include("blocks/db.php");       
+         $nws_name=mysqli_fetch_assoc(mysqli_query($db,"SELECT title FROM news where id like '$id'"));
+         $name = $nws_name["title"];
+         return $name; 
+       }
+
    } 
 
 ?>
