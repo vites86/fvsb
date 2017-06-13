@@ -76,10 +76,10 @@
                                 </a>
                                 <h4>%s</h4>
                                 <p>%s</p>
-                                <a class='btn btn-primary readmore'>Детальніше <i class='fa fa-angle-right'></i></a>
+                                <a href='news_one.php?id=%s' class='btn btn-primary readmore'>Детальніше <i class='fa fa-angle-right'></i></a>
                             </div>
                         </div>    
-                    </div>", $myrow['eurodate'], $myrow['name'], $myrow['id'], $myrow['id'], $myrow['id'], $myrow['title'], $myrow['description']);
+                    </div>", $myrow['eurodate'], $myrow['name'], $myrow['id'], $myrow['id'], $myrow['id'], $myrow['title'], $myrow['description'], $myrow['id']);
              } 
            mysqli_free_result($result); 
 	   }
@@ -185,7 +185,7 @@
                         <h3>Архів</h3>
                         <div class="row">
                             <div class="col-sm-12">
-                                <? include("blocks/right_block_archive.php"); ?>
+                                <? include("blocks/right_block_news_archive.php"); ?>
                             </div>
                         </div>                     
                     </div>
@@ -213,12 +213,12 @@
     				<div class="widget blog_gallery">
                         <h3>Наша галерея</h3>
                         <ul class="sidebar-gallery">
-                            <li><a href="gallery_one.php?id=1"><img style="height:65px" src="images/news/1.png" alt="" /></a></li>
-                            <li><a href="gallery_one.php?id=2"><img style="height:65px" src="images/news/2.png" alt="" /></a></li>
-                            <li><a href="gallery_one.php?id=3"><img style="height:65px" src="images/news/3.png" alt="" /></a></li>
-                            <li><a href="gallery_one.php?id=4"><img style="height:65px" src="images/news/4.png" alt="" /></a></li>
-                            <li><a href="gallery_one.php?id=5"><img style="height:65px" src="images/news/5.png" alt="" /></a></li>
-                            <li><a href="gallery_one.php?id=6"><img style="height:65px" src="images/news/6.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=1"><img style="height:65px" src="images/news/1.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=2"><img style="height:65px" src="images/news/2.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=3"><img style="height:65px" src="images/news/3.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=4"><img style="height:65px" src="images/news/4.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=5"><img style="height:65px" src="images/news/5.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=6"><img style="height:65px" src="images/news/6.png" alt="" /></a></li>
                         </ul>
                     </div>
                     <!--/.blog_gallery-->

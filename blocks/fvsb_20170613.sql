@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3307
--- Час створення: Чрв 09 2017 р., 16:46
+-- Час створення: Чрв 13 2017 р., 17:12
 -- Версія сервера: 5.6.22-log
 -- Версія PHP: 5.6.3
 
@@ -19,6 +19,38 @@ SET time_zone = "+00:00";
 --
 -- База даних: `fvsb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `events`
+--
+
+CREATE TABLE IF NOT EXISTS `events` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `description` text,
+  `meta_k` varchar(255) DEFAULT NULL,
+  `meta_d` varchar(255) DEFAULT NULL,
+  `text_` text,
+  `date_` datetime DEFAULT NULL,
+  `img` varchar(500) DEFAULT NULL,
+  `fb_id` int(11) NOT NULL,
+  `tw_id` int(11) NOT NULL,
+  `place` text NOT NULL,
+  `cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Дамп даних таблиці `events`
+--
+
+INSERT INTO `events` (`id`, `title`, `description`, `meta_k`, `meta_d`, `text_`, `date_`, `img`, `fb_id`, `tw_id`, `place`, `cat_id`) VALUES
+(1, 'Кубок України імені генерала Кульчицького, ІІІ ранг', 'Кубок України імені генерала Кульчицького, ІІІ ранг', 'Кубок України імені генерала Кульчицького, ІІІ ранг', 'Кубок України імені генерала Кульчицького, ІІІ ранг', 'Кубок України імені генерала Кульчицького, ІІІ ранг', '2017-10-13 00:00:00', '1.png', 0, 0, 'м.Одеса', 1),
+(2, 'НТЗ до чемпіонату світу (з спеціальної фізичної підготовки)', 'НТЗ до чемпіонату світу (з спеціальної фізичної підготовки)', 'НТЗ до чемпіонату світу (з спеціальної фізичної підготовки)', 'НТЗ до чемпіонату світу (з спеціальної фізичної підготовки)', 'НТЗ до чемпіонату світу (з спеціальної фізичної підготовки)', '2017-11-10 00:00:00', '2.png', 0, 0, 'м.Харків', 2),
+(3, 'Чемпіонат світу (дорослі, юніори, юнаки)', 'Чемпіонат світу (дорослі, юніори, юнаки)', 'Чемпіонат світу (дорослі, юніори, юнаки)', 'Чемпіонат світу (дорослі, юніори, юнаки)', 'Чемпіонат світу (дорослі, юніори, юнаки)', '2017-11-24 00:00:00', '3.png', 0, 0, 'м.Харків', 1),
+(4, 'Технічна поясова атестація', 'Технічна поясова атестація', 'Технічна поясова атестація', 'Технічна поясова атестація', 'Технічна поясова атестація', '2017-12-23 00:00:00', '4.png', 0, 0, 'Регіони', 4);
 
 -- --------------------------------------------------------
 
@@ -57,14 +89,23 @@ INSERT INTO `news` (`id`, `author`, `title`, `description`, `meta_t`, `meta_d`, 
 -- Структура таблиці `news_category`
 --
 
-CREATE TABLE IF NOT EXISTS `news_category` (`id` int(11) NOT NULL AUTO_INCREMENT, `attribute` varchar(25) NOT NULL, `name`varchar(25) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+CREATE TABLE IF NOT EXISTS `news_category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `attribute` varchar(25) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Дамп даних таблиці `news_category`
 --
 
-INSERT INTO `news_category` (`id`, `attribute`, `name`) VALUES (1, 'html', 'Змагання'), (2, 'joomla', 'Збори'), (3, 'wordpress', 'Семінари');
-update `news_category` set `name` = 'Змагання' where `id`=1;
+INSERT INTO `news_category` (`id`, `attribute`, `name`) VALUES
+(1, 'html', 'Змагання'),
+(2, 'joomla', 'Збори'),
+(3, 'wordpress', 'Семінари'),
+(4, 'drupal', 'Атестація');
+
 -- --------------------------------------------------------
 
 --

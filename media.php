@@ -40,6 +40,7 @@
                 <li><a class="btn btn-default" href="#" data-filter=".html">Змагання</a></li>
                 <li><a class="btn btn-default" href="#" data-filter=".joomla">Збори</a></li>
                 <li><a class="btn btn-default" href="#" data-filter=".wordpress">Семінари</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".drupal">Атестації</a></li>
             </ul><!--/#portfolio-filter-->
 		</div>
 </p><p>
@@ -56,6 +57,8 @@
                if ($myrow['category_id']=="1") $category="html";
                if ($myrow['category_id']=="2") $category="joomla";
                if ($myrow['category_id']=="3") $category="wordpress";
+               if ($myrow['category_id']=="4") $category="drupal";
+               
 
              printf(" <div class='portfolio-item %s col-xs-12 col-sm-4 col-md-3'>
                           <div class='recent-work-wrap'>
