@@ -185,7 +185,7 @@
                         <h3>Архів</h3>
                         <div class="row">
                             <div class="col-sm-12">
-                                <? include("blocks/right_block_archive.php"); ?>
+                                <? include("blocks/right_block_news_archive.php"); ?>
                             </div>
                         </div>                     
                     </div>

@@ -1,36 +1,23 @@
             <div class="tt-panel" style="display: block;">
               <ul class="skr">
 
-                <li class='tcarusel-item'>
-                  <img class='news_img' src="images/events/1.png" alt='%s' tooltip='%s'>
-                  <a href='events.php?id=%s&page=1'><b>13.10.17</b> // м.Одеса //   <br>Кубок України імені генерала Кульчицького, ІІІ ранг</a>
-                </li>
+                <? 
+                     include('blocks/db.php');
+                     if ($result = mysqli_query($db, "SELECT *, DATE_FORMAT(date_,'%d.%m.%Y') as eurodate FROM events where date_ > NOW() ORDER BY date_")) 
+	                   {
+                       while( $myrow = mysqli_fetch_assoc($result) )
+	                     {
+                         printf(" <li class='tcarusel-item'>
+                                    <img class='news_img' src='images/events/%s.png' alt='%s' tooltip='%s'>
+                                    <a href='events.php?id=%s&page=1'><b>%s</b> // %s //   
+                                    <br>%s
+                                    </a>
+                                  </li>", $myrow['id'],  $myrow['title'], $myrow['title'], $myrow['id'], $myrow['eurodate'], $myrow['place'], $myrow['title']);
+                             } 
+                           mysqli_free_result($result); 
+	                     }
+	                    //  mysqli_close($db); 
+                ?>             
 
-                <li class='tcarusel-item'>
-                  <a href='events.php?id=%s&page=1'>
-                    <img class='news_img' src='images/events/2.png' alt='%s' tooltip='%s'>
-                    <br>
-                    <b>10.11.17 </b> // м.Харків //
-                    <br>НТЗ до чемпіонату світу (з спеціальної фізичної підготовки)
-                  </a>
-                </li>
-
-                <li class='tcarusel-item'>
-                  <a href='events.php?id=%s&page=1'>
-                    <img class='news_img' src='images/events/3.png' alt='%s' tooltip='%s'>
-                    <br>
-                    <b>24.11.17</b> // м.Харків //
-                    <br>Чемпіонат світу (дорослі, юніори, юнаки)
-                  </a>
-                </li>
-
-                <li class='tcarusel-item'>
-                  <a href='events.php?id=%s&page=1'>
-                    <img class='news_img' src='images/events/4.png' alt='%s' tooltip='%s'>
-                    <br>
-                    <b>23.12.17</b> // Регіони //
-                    <br>Технічна поясова атестація
-                  </a>
-                </li>
               </ul>
             </div>

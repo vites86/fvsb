@@ -57,14 +57,14 @@ INSERT INTO `news` (`id`, `author`, `title`, `description`, `meta_t`, `meta_d`, 
 -- Структура таблиці `news_category`
 --
 
-CREATE TABLE IF NOT EXISTS `news_category` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `attribute` varchar(25) NOT NULL,  `name` varchar(25) NOT NULL,  PRIMARY KEY (`id`)) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+CREATE TABLE IF NOT EXISTS `news_category` (`id` int(11) NOT NULL AUTO_INCREMENT, `attribute` varchar(25) NOT NULL, `name`varchar(25) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Дамп даних таблиці `news_category`
 --
 
-INSERT INTO `news_category` (`id`, `attribute`, `name`) VALUES(1, 'html', 'Змагання'),(2, 'joomla', 'Збори'),(3, 'wordpress', 'Семінари');
-
+INSERT INTO `news_category` (`id`, `attribute`, `name`) VALUES (1, 'html', 'Змагання'), (2, 'joomla', 'Збори'), (3, 'wordpress', 'Семінари');
+update `news_category` set `name` = 'Змагання' where `id`=1;
 -- --------------------------------------------------------
 
 --

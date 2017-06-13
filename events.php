@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>          
-    <? $year = isset($_GET["year"]) ? $_GET["year"] : "%" ; ?>
-    <title>Архів<? if(isset($_GET["year"])) echo $year; else ""?> </title>
+  <head>   
+    <title>Анонс</title>                                                                                     
     <?php include("blocks/header_links.php") ;?>
   </head>
   <body>
@@ -16,16 +15,23 @@
                    // alert("08.10.2010 року ВФВСБ наказом № 3531 Міністерства України у справах молоді, сім'ї та спорту присвоєно статус <b>«Національної»</b>", this);
                }                    
                $(window).load(function(){   
-                  document.getElementById("header_news").className = 'active';          
+                  document.getElementById("header_events").className = 'active';          
              }); 
       </script>
+     <? 
+       include("blocks/db.php");  
+       include("blocks/myclass.php"); 
+       $cat_id = isset($_GET["cat_id"]) ? $_GET["cat_id"] : "%" ;
+       if(isset($_GET["cat_id"])) $cat_name = Db::GetNewsCatName($cat_id);
+     ?>
 	</header>
 	
 	<div id="breadcrumb">
 		<div class="container">	
 			<div class="breadcrumb">							
 				<li><a href="index.php">Головна</a></li>
-				<li>Новини <? if(isset($_GET["year"])) echo " / Архів / ".$year; else " / Архів"?> </li>			
+				<li>Анонс подій</li>		
+                <li><? echo $cat_name; ?></li>	
 			</div>		
 		</div>	
 	</div>
@@ -34,22 +40,20 @@
         <div class="blog">
             <div class="row">
                  <div class="col-md-8">
-    <? 
-       include("blocks/db.php");  
+    <?        
        $max_posts=3; 
-       $num_posts=mysqli_fetch_assoc(mysqli_query($db,"SELECT COUNT(*) FROM news WHERE date_ LIKE '$year%'"));
+       $num_posts=mysqli_fetch_assoc(mysqli_query($db,"SELECT COUNT(*) FROM events where cat_id like '$cat_id'"));
        $num_posts = $num_posts["COUNT(*)"]; 
        $num_pages=ceil($num_posts/$max_posts);  
        if (isset($_GET['page']))  {$page=$_GET['page'];} else {$page=1;}
        if ($page>$num_pages) {$page=$num_pages;}
        if ($page<1) {$page=1;}
 
-       if ($result = mysqli_query($db, "SELECT nws.id as id, nws.category_id, nws.title, nws.description, 
-                                        cat.name, DATE_FORMAT(nws.date_,'%d.%m.%Y') as eurodate 
-                                        FROM `news` as nws 
+       if ($result = mysqli_query($db, "SELECT evnts.id as id, evnts.cat_id, evnts.title, evnts.description, 
+                                        cat.name, DATE_FORMAT(evnts.date_,'%d.%m.%Y') as eurodate 
+                                        FROM `events` as evnts 
                                         left outer join news_category as cat 
-                                        on nws.category_id = cat.id  
-                                        WHERE nws.date_ LIKE '$year%' order by date_ desc LIMIT ".($page-1)*$max_posts.",". $max_posts)) 
+                                        on evnts.cat_id = cat.id  WHERE cat.id LIKE '$cat_id' order by date_ desc LIMIT ".($page-1)*$max_posts.",". $max_posts)) 
 	   {
            while( $myrow = mysqli_fetch_assoc($result) )
 		   {
@@ -68,14 +72,14 @@
                                 
                             <div class='col-xs-12 col-sm-9 blog-content'>
                                 <a href='news_one.php?id=%s'>
-                                   <img class='img-responsive img-blog' src='images/news/%s.png' width='100%%' alt='images/news/%.png' />
+                                   <img class='img-responsive img-blog' src='images/events/%s.png' width='100%%' alt='images/news/%.png' />
                                 </a>
                                 <h4>%s</h4>
                                 <p>%s</p>
-                                <a class='btn btn-primary readmore'>Детальніше <i class='fa fa-angle-right'></i></a>
+                                <a href='news_one.php?id=%s' class='btn btn-primary readmore'>Детальніше <i class='fa fa-angle-right'></i></a>
                             </div>
                         </div>    
-                    </div>", $myrow['eurodate'], $myrow['name'], $myrow['id'], $myrow['id'], $myrow['id'], $myrow['title'], $myrow['description']);
+                    </div>", $myrow['eurodate'], $myrow['name'], $myrow['id'], $myrow['id'], $myrow['id'], $myrow['title'], $myrow['description'], $myrow['id']);
              } 
            mysqli_free_result($result); 
 	   }
@@ -87,22 +91,15 @@
                       <?php 
                            if ($page==1) $k=1;
                            else $k=$page-1;
-                           echo "<li><a href='news_archive.php?page=$k&year=$year'><i class='fa fa-long-arrow-left'></i>Попередня</a></li>";                      
-                            for($i=1; $i <= $num_pages; $i++) 
+                           echo "<li><a href='events.php?page=$k'><i class='fa fa-long-arrow-left'></i>Попередня</a></li>";                      
+                           for($i=1; $i <= $num_pages; $i++) 
                             	{
-                            		if ($page==$i) 
-                                    echo "<li><a class='active' href='news_archive.php?page=$i&year=$year'> $i </a></li>"; 
-                            		else
-                            		echo "<li><a href='news_archive.php?page=$i&year=$year'> $i </a></li>"; 
-                            	}  	    		      	
-                            // <li class="active"><a href="#">1</a></li>
-                            // <li><a href="#">2</a></li>
-                            // <li><a href="#">3</a></li>
-                            // <li><a href="#">4</a></li>
-                            // <li><a href="#">5</a></li>
+                            		if ($page==$i) echo "<li><a class='active' href='events.php?page=$i'> $i </a></li>"; 
+                            		else           echo "<li><a href='events.php?page=$i'> $i </a></li>"; 
+                            	}  	 
                             if ($page>$num_pages) $page=$num_pages;
                             else $k = $k+1;
-                            echo "<li><a href='news_archive.php?page=$k&year=$year'>Наступна<i class='fa fa-long-arrow-right'></i></a></li>";
+                            echo "<li><a href='events.php?page=$k'>Наступна<i class='fa fa-long-arrow-right'></i></a></li>";
                         ?>
                     </ul><!--/.pagination-->
 
@@ -124,19 +121,22 @@
                             <div class="col-sm-6">
                                 <ul class="blog_category">
                                        <?
-                                           require_once("blocks/myclass.php");                                           
                                            if ($result = mysqli_query($db, "SELECT * from news_category")) 
                                        	   {
                                             while( $myrow = mysqli_fetch_assoc($result) )
                                        		  {        
                                                 $id = $myrow['id'];     
-                                                $news_count = Db::GetNewsCountFromCategoryByDate($id, $year);                                             
-                                                printf("<li><a href='news_archive.php?cat_id=%s&year=$year'>%s <span class='badge'>%s</span></a></li>", $id, $myrow['name'], $news_count);
+                                                $news_count = Db::GetEventsCountFromCategory($id);                                             
+                                                printf("<li><a href='events.php?cat_id=%s'>%s <span class='badge'>%s</span></a></li>", $id, $myrow['name'], $news_count);
                                               } 
                                             mysqli_free_result($result); 
                                        	    }
                                        	   mysqli_close($db); 
                                        ?>
+                                    <!--<li><a href="#">Computers <span class="badge">04</span></a></li>
+                                    <li><a href="#">Smartphone <span class="badge">10</span></a></li>
+                                    <li><a href="#">Gedgets <span class="badge">06</span></a></li>
+                                    <li><a href="#">Technology <span class="badge">25</span></a></li>-->
                                 </ul>
                             </div>
                         </div>                     
@@ -148,7 +148,7 @@
                         <h3>Архів</h3>
                         <div class="row">
                             <div class="col-sm-12">
-                                <? include("blocks/right_block_archive.php"); ?>
+                                <? include("blocks/right_block_events_archive.php"); ?>
                             </div>
                         </div>                     
                     </div>
@@ -176,12 +176,12 @@
     				<div class="widget blog_gallery">
                         <h3>Наша галерея</h3>
                         <ul class="sidebar-gallery">
-                            <li><a href="gallery_one.php?id=1"><img style="height:65px" src="images/news/1.png" alt="" /></a></li>
-                            <li><a href="gallery_one.php?id=2"><img style="height:65px" src="images/news/2.png" alt="" /></a></li>
-                            <li><a href="gallery_one.php?id=3"><img style="height:65px" src="images/news/3.png" alt="" /></a></li>
-                            <li><a href="gallery_one.php?id=4"><img style="height:65px" src="images/news/4.png" alt="" /></a></li>
-                            <li><a href="gallery_one.php?id=5"><img style="height:65px" src="images/news/5.png" alt="" /></a></li>
-                            <li><a href="gallery_one.php?id=6"><img style="height:65px" src="images/news/6.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=1"><img style="height:65px" src="images/news/1.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=2"><img style="height:65px" src="images/news/2.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=3"><img style="height:65px" src="images/news/3.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=4"><img style="height:65px" src="images/news/4.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=5"><img style="height:65px" src="images/news/5.png" alt="" /></a></li>
+                            <li><a href="gallery.php?id=6"><img style="height:65px" src="images/news/6.png" alt="" /></a></li>
                         </ul>
                     </div>
                     <!--/.blog_gallery-->
@@ -192,6 +192,6 @@
 	
 	<footer>
 		 <? include("blocks/footer.php"); ?>
-	</footer>
+	</footer>	
 </body>
 </html>

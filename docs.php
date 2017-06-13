@@ -114,7 +114,7 @@
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">
-								<a href="files/shema_ocinochnyh_diy.pdf" target="_blank">Схема взаємодії оціночних дій голови і членнів атестаційної комісії</a>
+								<a href="files/shema_ocinochnyh_diy.pdf" target="_blank">Схема взаємодії оціночних дій голови і членів атестаційної комісії</a>
 								</h4>
 							</div>
 						</li>
