@@ -71,12 +71,12 @@
                             </div>
                                 
                             <div class='col-xs-12 col-sm-9 blog-content'>
-                                <a href='news_one.php?id=%s'>
+                                <a target='_blank' href='news_one.php?id=%s'>
                                    <img class='img-responsive img-blog' src='images/news/%s.png' width='100%%' alt='images/news/%.png' />
                                 </a>
                                 <h4>%s</h4>
                                 <p>%s</p>
-                                <a href='news_one.php?id=%s' class='btn btn-primary readmore'>Детальніше <i class='fa fa-angle-right'></i></a>
+                                <a target='_blank' href='news_one.php?id=%s' class='btn btn-primary readmore'>Детальніше <i class='fa fa-angle-right'></i></a>
                             </div>
                         </div>    
                     </div>", $myrow['eurodate'], $myrow['name'], $myrow['id'], $myrow['id'], $myrow['id'], $myrow['title'], $myrow['description'], $myrow['id']);

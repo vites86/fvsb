@@ -53,7 +53,7 @@
                                         cat.name, DATE_FORMAT(evnts.date_,'%d.%m.%Y') as eurodate 
                                         FROM `events` as evnts 
                                         left outer join news_category as cat 
-                                        on evnts.cat_id = cat.id  WHERE cat.id LIKE '$cat_id' order by date_ desc LIMIT ".($page-1)*$max_posts.",". $max_posts)) 
+                                        on evnts.cat_id = cat.id  WHERE cat.id LIKE '$cat_id' order by date_ LIMIT ".($page-1)*$max_posts.",". $max_posts)) 
 	   {
            while( $myrow = mysqli_fetch_assoc($result) )
 		   {
@@ -71,12 +71,12 @@
                             </div>
                                 
                             <div class='col-xs-12 col-sm-9 blog-content'>
-                                <a href='news_one.php?id=%s'>
+                                <a target='_blank' href='events_one.php?id=%s'>
                                    <img class='img-responsive img-blog' src='images/events/%s.png' width='100%%' alt='images/news/%.png' />
                                 </a>
                                 <h4>%s</h4>
                                 <p>%s</p>
-                                <a href='news_one.php?id=%s' class='btn btn-primary readmore'>Детальніше <i class='fa fa-angle-right'></i></a>
+                                <a target='_blank' href='events_one.php?id=%s' class='btn btn-primary readmore'>Детальніше <i class='fa fa-angle-right'></i></a>
                             </div>
                         </div>    
                     </div>", $myrow['eurodate'], $myrow['name'], $myrow['id'], $myrow['id'], $myrow['id'], $myrow['title'], $myrow['description'], $myrow['id']);
@@ -107,10 +107,10 @@
                    
                 <aside class="col-md-4">
                     <!--/.search-->
-                    <div class="widget search">
-                        <form role="form">
-                            <input type="text" class="form-control search_box" autocomplete="off" placeholder="Пошук">
-                        </form>
+                    <div class="widget search media">
+                        <span  style="color:black;font-size: 19px; font-weight:bold;">Календар заходів на 2017 рік</span>
+                        &ensp;<a target="_blank" href="calendar.pdf" alt="Переглянути"><i style='font-size: 21px;' class="fa fa-download"></i></a>
+                        &ensp;<a target="_blank" href="calendar.docx" alt="Завантажити"><i style='font-size: 21px;' class="fa fa-eye"></i></a>
                     </div>
                     <!--/.search-->
                      

@@ -62,7 +62,7 @@
 
              printf(" <div class='portfolio-item %s col-xs-12 col-sm-4 col-md-3'>
                           <div class='recent-work-wrap'>
-                            <a class='news_link' href='gallery.php?id=%s' rel=''>
+                            <a target='_blank' class='news_link' href='gallery.php?id=%s' rel=''>
                               <img class='img-responsive' src='images/news/%s.png' alt=''>
                               <div class='overlay'>
                                 <div class='recent-work-inner'>

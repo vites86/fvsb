@@ -6,7 +6,7 @@
 	       {
            printf("
            <div class='col-md-4 wow fadeInDown' data-wow-duration='1000ms' data-wow-delay='300ms'>
-             <a href='news_one.php?id=%s'>
+             <a target='_blank' href='news_one.php?id=%s'>
                <img src='images/news/%s.png' class='img-responsive' style='width:100%%;'/>
                <h3>%s</h3>
                <p>%s</p>

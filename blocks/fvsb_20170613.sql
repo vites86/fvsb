@@ -37,10 +37,10 @@ CREATE TABLE IF NOT EXISTS `events` (
   `img` varchar(500) DEFAULT NULL,
   `fb_id` int(11) NOT NULL,
   `tw_id` int(11) NOT NULL,
-  `place` text NOT NULL,
+  `place` varchar(500) NOT NULL,
   `cat_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Дамп даних таблиці `events`
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `news_category` (
   `attribute` varchar(25) NOT NULL,
   `name` varchar(25) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Дамп даних таблиці `news_category`

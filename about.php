@@ -150,27 +150,23 @@
 
   <div class="our-team">
     <div class="container">
-      <h3>Керівництво Федерації</h3>
+      <h3 style='text-align:center'>Керівництво Федерації</h3>
       <div class="text-center">
-        <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
           <img src="images/services/2.png" alt="">
           <h4>Федорцов Олександр Петрович</h4>
           <p>Віце - Президент Федерації
-            <br> 8 дан
+            <br> чорний пояс, 8 дан
             <br>Суддя міжнародної категорії </p>
         </div>
-        <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+        <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
           <img src="images/services/1.png" alt="">
           <h4>Зайцев Сергій Васильович</h4>
           <p>Президент Федерації
-            <br> 10 дан
-            <br>Майстер спорту України</p>
-        </div>
-        <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
-          <img src="images/services/3.jpg" alt="">
-          <h4>John Doe</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing eil sed deiusmod tempor</p>
-        </div>
+            <br> чорний пояс, 10 дан
+            <br>Майстер спорту України
+            <br>Заслужений тренер України</p>
+        </div>      
       </div>
     </div>
   </div>

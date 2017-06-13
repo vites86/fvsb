@@ -9,7 +9,7 @@
 	                     {
                          printf(" <li class='tcarusel-item'>
                                     <img class='news_img' src='images/events/%s.png' alt='%s' tooltip='%s'>
-                                    <a href='events.php?id=%s&page=1'><b>%s</b> // %s //   
+                                    <a target='_blank' href='events_one.php?id=%s&page=1'><b>%s</b> // %s //   
                                     <br>%s
                                     </a>
                                   </li>", $myrow['id'],  $myrow['title'], $myrow['title'], $myrow['id'], $myrow['eurodate'], $myrow['place'], $myrow['title']);
