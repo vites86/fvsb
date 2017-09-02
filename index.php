@@ -56,18 +56,21 @@
     <!--/.carousel-->
   </section>
   <!--/#main-slider-->
-
+<div class="row">
+         <div class="col-md-12 text-center">
+           <h1 style="color: #1BBD36; font-weight: bold;margin-top: 20px;">Військово - спортивні багатоборства</h1>
+         </div>
+      </div>
   <div class="feature">
     <div class="container">
       <div class="text-center">
-        <h1 style="color: #1BBD36; font-weight: bold;margin-top: -20px;">Військово - спортивні багатоборства</h1>
-
-        <div class="col-md-6">
+      
+        <div class="col-md-6 hidden-xs">
           <div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
             <img style="width: 100%;margin-top: 15px;" src="images/slider/dvoborstvo.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 hidden-xs">
           <div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
             <h2>Військово-прикладне семиборствo:</h2>
             <ul type="none" style="color:black; text-align: left; margin-left: 100px;">
