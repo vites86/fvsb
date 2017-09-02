@@ -1312,3 +1312,16 @@ a.scrollup:hover{
   margin-top: 2px;
   margin-bottom: 2px;
 }
+
+.tcarusel-item-mobile {
+  padding-top: 10;
+  list-style-type: none;
+  margin: 10 0 0px 10;
+  height: auto;
+  /*display: block;*/
+}
+.skr-mobile  {
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
