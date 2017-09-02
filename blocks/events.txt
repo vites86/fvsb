@@ -1,0 +1,10 @@
+<br>
+<b>Дата</b>: 13-15 жовтня 2017 року<br>
+<b>Місце проведення</b>: м. Харкiв, комунальний заклад «Школа вищої спортивної майстерності» (вул. Динамівська, 5-А)<br>
+<b>Початок </b>: в 9-00</b> <br>
+<b>Закінчення</b>: приблизно 19-00<br><br><br><br>
+<hr/> 
+<div style='width:100%;text-align:center'><img style='width:100%;' src='images/events/kubok2017_1.jpg'/></div>
+<div style='width:100%;text-align:center'><img style='width:100%;' src='images/events/kubok2017_2.png'/></div>
+<div style='width:100%;text-align:center'><img style='width:100%;' src='images/events/kubok2017_3.jpg'/></div>
+<div style='width:100%;text-align:center'><img style='width:100%;' src='images/events/kubok2017_4.jpg'/></div>
