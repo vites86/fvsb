@@ -6,22 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
-  <link href="../css/bootstrap.css" rel="stylesheet">
-	<link rel="stylesheet" href="../css/font-awesome.css">
-	<link rel="stylesheet" href="../css/animate.css">
-	<link href="../css/prettyPhoto.css" rel="stylesheet">
-	<link href="../css/style.css" rel="stylesheet" />
-	<link href="../css/mobile.css" rel="stylesheet" />
-	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">	
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../js/jquery-2.1.1.min.js"></script>  
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.prettyPhoto.js"></script>
-    <script src="../js/jquery.isotope.min.js"></script>  
-    <script src="../js/wow.min.js"></script>
-    <script src="../js/functions.js"></script>
+	<link href="css/mobile.css" rel="stylesheet" />
+	<?php include("blocks/header_links.php") ;?>
 </head>
 <body>
   <header>
@@ -66,15 +52,15 @@
   <section id="main-slider" class="no-margin">
     <div class="carousel slide">
       <div class="carousel-inner">
-        <div class="item active" style="background-image: url(../images/slider/bg1.jpg)">
+        <div class="item active" style="background-image: url(images/slider/bg1.jpg)">
           <div class="container">
             <div class="row slide-margin">
               <div class="col-sm-12">
                 <div class="carousel-content-mobile" style="text-align:center !important;text-shadow: grey 1px 2px 3px;">
                   <p class="animation animated-item-1">громадська організація</p>
-                  <h2 class="animation animated-item-1">Всеукраїнська <span>Федерація</span></h2>
+                  <h2 class="animation animated-item-1" style="color:white !important;">Всеукраїнська <span>Федерація</span></h2>
                   <p class="animation animated-item-2"style="color:white !important; ">військово-спортивних багатоборств</p>
-                  <img style="width:30%;" src="../images/logo.png" />
+                  <img style="width:30%;" src="images/logo.png" />
                   <br>
                   <br>
                   <span id=''>
@@ -148,19 +134,19 @@
           <h2>Останні Новини</h2>
       </div>
       <? 
-       include('../blocks/db.php');
+       include('blocks/db.php');
        if ($result = mysqli_query($db, 'SELECT * FROM news ORDER BY date_ desc limit 3')) 
 	     {
          while( $myrow = mysqli_fetch_assoc($result) )
 	       {
            printf("
            <div class='col-sm-12'>
-             <a target='_blank' href='../news_one.php?id=%s'>
-               <img src='../images/news/%s.png' class='img-responsive' style='width:100%%;'/>
+             <a target='_blank' href='news_one.php?id=%s'>
+               <img src='images/news/%s.png' class='img-responsive' style='width:100%%;'/>
                <h3>%s</h3>
                <p>%s</p>
                <input type='button' value='Детальніше' 
-               class='btn-slide animation animated-item-3 btn btn-success' href='../news_one.php?id=%s'></input>               
+               class='btn-slide animation animated-item-3 btn btn-success' href='news_one.php?id=%s'></input>               
              </a>        
            </div><hr>", $myrow['id'], $myrow['id'], $myrow['title'], $myrow['description'], $myrow['id']);
                } 
@@ -179,23 +165,23 @@
       <div class="partners-mobile">
         <ul style="" class="">
         <li>
-                 - <a href="../units.php#tnp">Тернопільська область</a>
-            <br> - <a href="../units.php#chk">Черкаська область</a>
-            <br> - <a href="../units.php#lv">Львівська область</a>            
-            <br> - <a href="../units.php#od">Одесська область</a>           
-            <br> - <a href="../units.php#lg">Луганська область </a>
-            <br> - <a href="../units.php#khv">Харьківська область</a>
+                 - <a href="units.php#tnp">Тернопільська область</a>
+            <br> - <a href="units.php#chk">Черкаська область</a>
+            <br> - <a href="units.php#lv">Львівська область</a>            
+            <br> - <a href="units.php#od">Одесська область</a>           
+            <br> - <a href="units.php#lg">Луганська область </a>
+            <br> - <a href="units.php#khv">Харьківська область</a>
             <br> - <a href="#">Донецька область</a>
-            <br> - <a href="../units.php#khm">Хмельницька область</a>
-            <br> - <a href="../units.php#dnr">Дніпропетровська область</a>
-            <br> - <a href="../units.php#sm">Сумська область</a>
+            <br> - <a href="units.php#khm">Хмельницька область</a>
+            <br> - <a href="units.php#dnr">Дніпропетровська область</a>
+            <br> - <a href="units.php#sm">Сумська область</a>
             <br> - <a href="#">Чернігівська область</a>
-            <br> - <a href="../units.php#krg">Кропивницька область</a>
-            <br> - <a href="../units.php#khs">Херсонська область</a>
-            <br> - <a href="../units.php#zht">Житомирська область</a>
-            <br> - <a href="../units.php#pl">Полтавська область </a>
-            <br> - <a href="../units.php#zp">Запорізька область</a>
-            <br> - <a href="../units.php#kv">Київська область </a>
+            <br> - <a href="/units.php#krg">Кропивницька область</a>
+            <br> - <a href="/units.php#khs">Херсонська область</a>
+            <br> - <a href="/units.php#zht">Житомирська область</a>
+            <br> - <a href="/units.php#pl">Полтавська область </a>
+            <br> - <a href="/units.php#zp">Запорізька область</a>
+            <br> - <a href="/units.php#kv">Київська область </a>
             <br>
           </li>
         </ul>    
@@ -213,20 +199,20 @@
             <h2>Анонс подій</h2>
             <div class="tt-panel" style="display: block;text-align:center">             
                 <? 
-                     include('../blocks/db.php');
+                     include('blocks/db.php');
                      if ($result = mysqli_query($db, "SELECT *, DATE_FORMAT(date_,'%d.%m.%Y') as eurodate FROM events where date_ > NOW() ORDER BY date_")) 
 	                   {
                        while( $myrow = mysqli_fetch_assoc($result) )
 	                     {
                          printf("  
                          <div class='col-sm-12'>
-                           <a target='_blank' href='../events_one.php?id=%s'>
-                             <img src='../images/events/%s.png' class='img-responsive' style='width:100%%;'/>
+                           <a target='_blank' href='events_one.php?id=%s'>
+                             <img src='images/events/%s.png' class='img-responsive' style='width:100%%;'/>
                              <h3>%s</h3>
                              <p><b>Дата проведення</b>: %s</p>
                              <p><b>Місце</b>: %s</p>
                              <input type='button' value='Детальніше' 
-                             class='btn-slide animation animated-item-3 btn btn-success' href='../events_one.php?id=%s'></input>               
+                             class='btn-slide animation animated-item-3 btn btn-success' href='events_one.php?id=%s'></input>               
                            </a>      
                          </div><hr>
                          ", $myrow['id'], $myrow['id'], $myrow['title'], $myrow['eurodate'], $myrow['place'], $myrow['id']);
@@ -250,13 +236,13 @@
                  <div class="col-sm-12">
                    <div class="center">
                      <h2>Контакти</h2>                     
-                     <ul style="color:black; list-style-type:none; text-align:center;" >
+                     <div style="color:black; list-style-type:none; text-align:center;" >
                        <li><b>Президент федерації</b>: <br>Зайцев Сергій Васильович</li>
-                       <li><img src="../images/zaicev2.png" style="width:20%;" alt=""></li>
+                       <li><img src="images/zaicev2.png" style="width:20%;" alt=""></li>
                        <li><b>тел.</b>: (063) 119 57 15</li>
                        <li><b>email</b>: president.fvsb@gmail.com</li>
                        <li><b>адреса</b>: м. Харків</li>
-                     </ul>
+                     </div>
                    </div>
                  </div>
               </div>
@@ -264,7 +250,7 @@
 
 
   <footer>
-     <? include("../blocks/m.footer.php"); ?>
+     <? include("blocks/m.footer.php"); ?>
   </footer>
 
 </body>

@@ -1,15 +1,9 @@
-<?php
-$id = isset($_GET["id"]) ? $_GET["id"] : "%" ;
-include("blocks/Mobile_Detect.php") ;
-$detect = new Mobile_Detect; 
-if ( $detect->isMobile() ) {header('Location: m.news_one.php?id='.$id); exit; } 
-?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Новини</title>
-  <?php include("blocks/header_links.php") ;?>
+  <link href="css/mobile.css" rel="stylesheet" />  
+    <?php include("blocks/header_links.php") ;?>
     <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" media="screen" />
     <script type="text/javascript" src="fancybox/jquery-1.3.2.min.js"></script>
     <script type="text/javascript" src="fancybox/jquery.easing.1.3.js"></script>
@@ -53,34 +47,31 @@ if ( $detect->isMobile() ) {header('Location: m.news_one.php?id='.$id); exit; }
         });
       </script>
 
-      <?
+<?
 include("blocks/db.php");
 include("blocks/myclass.php");
+$id = isset($_GET["id"]) ? $_GET["id"] : "%" ;
 if(isset($_GET["id"])) $nws_name = Db::GetNewsName($id);
 ?>
   </header>
 
-  <div id="breadcrumb">
+  <div id="breadcrumb-mobile">
     <div class="container">
-      <div class="breadcrumb">
+      <div class="breadcrumb-mobile">
+          <ul>
         <li><a href="index.php">Головна</a></li>
-        <li>Новини</li>
-        <li>
-          <? echo $nws_name; ?>
-        </li>
+        <li>Новини | <? echo $nws_name; ?></li> 
+    </ul>      
       </div>
     </div>
   </div>
 
-
   <section id="blog" class="container">
     <div class="blog">
       <div class="row">
-
         <div class="col-lg-12">
           <h1 style='color:black;text-align:center'><? echo $nws_name; ?></h1>
           <br>
-
 <? 
     if ($result = mysqli_query($db, "SELECT *, DATE_FORMAT(date_,'%d.%m.%Y') as eurodate FROM `news` WHERE id LIKE '$id' LIMIT 1")) 
 	   {
@@ -93,7 +84,6 @@ if(isset($_GET["id"])) $nws_name = Db::GetNewsName($id);
                                <span><i class='fa'>#</i><a href='#'><b>%s</b></a></span>                                    
                                <span><i class='fa fa-user'></i> <a href='#'>Адміністратор</a></span>
                                <span><i class='fa fa-comment'></i> <a href='#'>0 Коментарів</a></span>
-                               <span><i class='fa fa-heart'></i><a href='#'>0 Likes</a></span>
                             </div>
                         </div>    
                     </div>",  $myrow['text_'], $myrow['eurodate'], $myrow['name'] );
@@ -104,6 +94,7 @@ if(isset($_GET["id"])) $nws_name = Db::GetNewsName($id);
 
 
 <h2 style='color:black;text-align:center'>Фото</h1>
+<div style="text-align:center;">
 <?php
         $dir = "images/news/".$id."/"; // Папка с изображениями
         $files = scandir($dir); // Берём всё содержимое директории
@@ -119,6 +110,7 @@ if(isset($_GET["id"])) $nws_name = Db::GetNewsName($id);
             }
         }
 ?>
+</div>
             <br>
             <br>
         </div>
@@ -128,8 +120,8 @@ if(isset($_GET["id"])) $nws_name = Db::GetNewsName($id);
   <!--/#blog-->
 
   <footer>
-    <? include("blocks/footer.php"); ?>
-  </footer>
+     <? include("blocks/m.footer.php"); ?>
+</footer>
 </body>
 
 </html>
