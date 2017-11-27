@@ -7,8 +7,7 @@ if ( $detect->isMobile() ) {header('Location: m.news_one.php?id='.$id); exit; }
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>Новини</title>
+<head>  
   <?php include("blocks/header_links.php") ;?>
     <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" media="screen" />
     <script type="text/javascript" src="fancybox/jquery-1.3.2.min.js"></script>
@@ -36,6 +35,19 @@ if ( $detect->isMobile() ) {header('Location: m.news_one.php?id='.$id); exit; }
 				
 			});
     </script>
+    <?
+        include("blocks/db.php");
+        include("blocks/myclass.php");
+        if(isset($_GET["id"])) $nws_name = Db::GetNewsName($id);
+        $result = mysqli_query($db, "SELECT *, DATE_FORMAT(date_,'%d.%m.%Y') as eurodate FROM `news` WHERE id LIKE '$id' LIMIT 1");
+        $myrow = mysqli_fetch_assoc($result);
+        $id = $myrow['id'];   
+        $meta_k= $myrow['meta_k'];
+        $meta_d= $myrow['meta_d'];
+   ?>   
+   <title><?php echo $nws_name; ?></title>
+   <meta name="keywords" content="<?php echo $meta_k; ?>">
+   <meta name="description" content="<?php echo $meta_d; ?>">
 
 </head>
 
@@ -53,11 +65,7 @@ if ( $detect->isMobile() ) {header('Location: m.news_one.php?id='.$id); exit; }
         });
       </script>
 
-      <?
-include("blocks/db.php");
-include("blocks/myclass.php");
-if(isset($_GET["id"])) $nws_name = Db::GetNewsName($id);
-?>
+
   </header>
 
   <div id="breadcrumb">

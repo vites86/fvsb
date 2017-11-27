@@ -30,6 +30,20 @@
 				
 			});
     </script>
+    <?
+         include("blocks/db.php");
+         include("blocks/myclass.php");
+         $id = isset($_GET["id"]) ? $_GET["id"] : "%" ;
+         if(isset($_GET["id"])) $nws_name = Db::GetNewsName($id);
+         $result = mysqli_query($db, "SELECT *, DATE_FORMAT(date_,'%d.%m.%Y') as eurodate FROM `news` WHERE id LIKE '$id' LIMIT 1");
+         $myrow = mysqli_fetch_assoc($result);
+         $id = $myrow['id'];   
+         $meta_k= $myrow['meta_k'];
+         $meta_d= $myrow['meta_d'];
+    ?>
+     <title><?php echo $nws_name; ?></title>
+     <meta name="keywords" content="<?php echo $meta_k; ?>">
+     <meta name="description" content="<?php echo $meta_d; ?>">
 
 </head>
 
@@ -47,12 +61,7 @@
         });
       </script>
 
-<?
-include("blocks/db.php");
-include("blocks/myclass.php");
-$id = isset($_GET["id"]) ? $_GET["id"] : "%" ;
-if(isset($_GET["id"])) $nws_name = Db::GetNewsName($id);
-?>
+
   </header>
 
   <div id="breadcrumb-mobile">
