@@ -5,6 +5,16 @@
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ukrainian National Federation of Military and Sport All-round Compatition." />
+  <meta name="keywords" content="msac, всб, військово-спортивні багатоборства, стрільба, бій, всестильовий бій" />
+ 	<link rel="canonical" href=http://fvsb.com.ua/ />
+  <meta name="robots" content="index.php">
+ 	<meta property="og:site_name" content="Ukrainian National Federation of Military and Sport All-round Compatition">
+	<meta property="og:title" content="ВФ ВСБ | MSAC" />
+	<meta property="og:description" content="Ukrainian National Federation of Military and Sport All-round Compatition." />
+	<meta property="og:image" content="http://fvsb.com.ua/images/logo.png" />
+	<meta property="og:url" content=http://fvsb.com.ua/ />
+	<meta property="og:type" content="website" />
     <!-- Bootstrap -->
   <link href="../css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="../css/font-awesome.css">

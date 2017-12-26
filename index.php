@@ -9,11 +9,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>ВСБ</title>
+  <title>ВФ ВСБ | MSAC</title>
   <?php include("blocks/header_links.php") ;?>  
 </head>
 <body>
   <header>
+  <meta name="description" content="Ukrainian National Federation of Military and Sport All-round Compatition." />
+  <meta name="keywords" content="msac, всб, військово-спортивні багатоборства, стрільба, бій, всестильовий бій" />
+ 	<link rel="canonical" href=http://fvsb.com.ua/ />
+  <meta name="robots" content="index.php">
+ 	<meta property="og:site_name" content="Ukrainian National Federation of Military and Sport All-round Compatition">
+	<meta property="og:title" content="ВФ ВСБ | MSAC" />
+	<meta property="og:description" content="Ukrainian National Federation of Military and Sport All-round Compatition." />
+	<meta property="og:image" content="http://fvsb.com.ua/images/logo.png" />
+	<meta property="og:url" content=http://fvsb.com.ua/ />
+	<meta property="og:type" content="website" />
+     
+     <meta name="author" content="">
       <?php include("blocks/header.php"); ?>
       <script>
                function showStatus() {   
