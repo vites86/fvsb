@@ -41,7 +41,7 @@
                 printf("
 						<li>
 							<div class='media-left'>
-								<img style='width:150px;' src='images/events/%s.png' class=''></img>						
+								<img style='width:150px;' src='%s' class=''></img>						
 							</div>
 							<div class='media-body'>
 								<h4 class='media-heading'>
@@ -51,7 +51,7 @@
                                 </h4>
 							</div>
 						</li>						
-					",  $myrow['id'], $myrow['id'], $myrow['title']); 
+					",  $myrow['img'], $myrow['id'], $myrow['title']); 
            } 
            mysqli_free_result($result); 
 	   }

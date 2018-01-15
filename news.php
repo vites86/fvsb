@@ -49,15 +49,16 @@
        if ($page>$num_pages) {$page=$num_pages;}
        if ($page<1) {$page=1;}
 
-       if ($result = mysqli_query($db, "SELECT nws.id as id, nws.category_id, nws.title, nws.description, 
+       if ($result = mysqli_query($db, "SELECT nws.id as id, nws.img, nws.category_id, nws.title, nws.description, 
                                         cat.name, DATE_FORMAT(nws.date_,'%d.%m.%Y') as eurodate 
                                         FROM `news` as nws 
                                         left outer join news_category as cat 
-                                        on nws.category_id = cat.id  WHERE cat.id LIKE '$cat_id' order by date_ desc LIMIT ".($page-1)*$max_posts.",". $max_posts)) 
+                                        on nws.category_id = cat.id  
+                                        WHERE cat.id LIKE '$cat_id' 
+                                        order by date_ desc LIMIT ".($page-1)*$max_posts.",". $max_posts)) 
 	   {
            while( $myrow = mysqli_fetch_assoc($result) )
 		   {
-               
              printf("<div class='blog-item'>
                         <div class='row'>
                             <div class='col-xs-12 col-sm-3'>
@@ -72,14 +73,14 @@
                                 
                             <div class='col-xs-12 col-sm-9 blog-content'>
                                 <a target='_blank' href='news_one.php?id=%s'>
-                                   <img class='img-responsive img-blog' src='images/news/%s.png' width='100%%' alt='images/news/%.png' />
+                                   <img class='img-responsive img-blog' src='%s' width='100%%' alt='%s' />
                                 </a>
                                 <h4>%s</h4>
                                 <p>%s</p>
                                 <a target='_blank' href='news_one.php?id=%s' class='btn btn-primary readmore'>Детальніше <i class='fa fa-angle-right'></i></a>
                             </div>
                         </div>    
-                    </div>", $myrow['eurodate'], $myrow['name'], $myrow['id'], $myrow['id'], $myrow['id'], $myrow['title'], $myrow['description'], $myrow['id']);
+                    </div>", $myrow['eurodate'], $myrow['name'], $myrow['id'], $myrow['img'], $myrow['img'], $myrow['title'], $myrow['description'], $myrow['id']);
              } 
            mysqli_free_result($result); 
 	   }

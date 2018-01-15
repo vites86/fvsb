@@ -11,7 +11,7 @@ include("blocks/myclass.php");
 if(isset($_GET["id"])) $nws_name = Db::GetEventsName($id);
   $result = mysqli_query($db, "SELECT *, DATE_FORMAT(date_,'%d.%m.%Y') as eurodate FROM `events` WHERE id LIKE '$id' LIMIT 1");
   $myrow = mysqli_fetch_assoc($result);
-  $id = $myrow['id'];
+  $img = $myrow['img'];
   $eurodate = $myrow['eurodate'];
   $time_span = $myrow['time_span'];
   $adress = $myrow['adress'];
@@ -75,7 +75,7 @@ if(isset($_GET["id"])) $nws_name = Db::GetEventsName($id);
                 printf("<div class='blog-item'>
                 <div class='row'>
                 <div class='col-xs-12 col-sm-12 blog-content'>
-                <img style='float: left; width:300px; margin: 0px 20px 10px 0px;' src='images/events/%s.png'>
+                <img style='float: left; width:300px; margin: 0px 20px 10px 0px;' src='%s'>
                 <div style='color:black;font-size:16px; margin-bottom:30px; '>
                 <br>
                 <span><b>Дата</b>: %s року<br></span>
@@ -94,7 +94,7 @@ if(isset($_GET["id"])) $nws_name = Db::GetEventsName($id);
                 <span><i class='fa fa-heart'></i><a href='#'>0 Likes</a></span>
                 </div>
                 </div>
-                </div>",  $id, $eurodate, $time_span, $adress, $start_time, $finish_time, $text_, $eurodate, $name );
+                </div>",  $img, $eurodate, $time_span, $adress, $start_time, $finish_time, $text_, $eurodate, $name );
                 mysqli_free_result($result);
             //  mysqli_close($db);
             ?>

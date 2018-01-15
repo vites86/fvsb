@@ -44,7 +44,7 @@
        if ($page>$num_pages) {$page=$num_pages;}
        if ($page<1) {$page=1;}
 
-       if ($result = mysqli_query($db, "SELECT nws.id as id, nws.category_id, nws.title, nws.description, 
+       if ($result = mysqli_query($db, "SELECT nws.id as id, nws.img, nws.category_id, nws.title, nws.description, 
                                         cat.name, DATE_FORMAT(nws.date_,'%d.%m.%Y') as eurodate 
                                         FROM `news` as nws 
                                         left outer join news_category as cat 
@@ -68,14 +68,14 @@
                                 
                             <div class='col-xs-12 col-sm-9 blog-content'>
                                 <a href='news_one.php?id=%s'>
-                                   <img class='img-responsive img-blog' src='images/news/%s.png' width='100%%' alt='images/news/%.png' />
+                                   <img class='img-responsive img-blog' src='%s' width='100%%' alt='%s' />
                                 </a>
                                 <h4>%s</h4>
                                 <p>%s</p>
                                 <a class='btn btn-primary readmore'>Детальніше <i class='fa fa-angle-right'></i></a>
                             </div>
                         </div>    
-                    </div>", $myrow['eurodate'], $myrow['name'], $myrow['id'], $myrow['id'], $myrow['id'], $myrow['title'], $myrow['description']);
+                    </div>", $myrow['eurodate'], $myrow['name'], $myrow['id'], $myrow['img'], $myrow['img'], $myrow['title'], $myrow['description']);
              } 
            mysqli_free_result($result); 
 	   }
@@ -148,7 +148,7 @@
                         <h3>Архів</h3>
                         <div class="row">
                             <div class="col-sm-12">
-                                <? include("blocks/right_block_archive.php"); ?>
+                                <? include("blocks/right_block_news_archive.php"); ?>
                             </div>
                         </div>                     
                     </div>
