@@ -99,7 +99,7 @@
               <span class="link-title">Спортсмени</span> 
               <span class="fa arrow"></span> 
             </a> 
-            <!-- <ul>
+            <ul>
               <li>
                 <a href="index.php?id=11">
                   <i class="fa fa-angle-right"></i>&nbsp; Додати cпортсмена </a> 
@@ -112,7 +112,7 @@
                 <a href="index.php?id=12">
                   <i class="fa fa-angle-right"></i>&nbsp; Редагувати cпортсмена </a> 
               </li>
-            </ul> -->
+            </ul>
           </li>         
          
          

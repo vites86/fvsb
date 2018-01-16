@@ -42,7 +42,7 @@ switch ($handler) {
                 
                 $result = Adminka::addNews($news_count, $title, $meta_d, $meta_k, $descr, $author, $text, $ext, $category_id); 
                 if($result =="good") {
-                    //Adminka::postInSocNetworks($news_count);
+                    //Adminka::POSTInSocNetworks($news_count);
                     $res_text = urlencode ( "Новину №$news_count <em>$title</em><br><br> <img src='../images/news/$fileName' alt=''><br><p>Добавлено успішно!</p>");
                     header("HTTP/1.1 301 Moved Permanently");                    
                     header("Location: result.php?result=$res_text");
@@ -248,7 +248,7 @@ switch ($handler) {
                 
                 $result = Adminka::addEvent($events_count, $title, $meta_d, $meta_k, $descr, $text, $img_src, $date, $category_id,$time_span,$start_time,$finish_time,$place, $adress); 
                 if($result =="good") {
-                    // Adminka::postInSocNetworks($news_count);
+                    // Adminka::POSTInSocNetworks($news_count);
                     $res_text = urlencode ( "Подію <em>$title</em><br><br> <img src='../images/events/$fileName' alt=''><br><p>Добавлено успішно!</p>");
                     header("HTTP/1.1 301 Moved Permanently");                    
                     header("Location: result.php?result=$res_text");
@@ -336,13 +336,17 @@ switch ($handler) {
                     header("HTTP/1.1 301 Moved Permanently");                    
                     header("Location: result.php?result=$res_text");
                     exit;
-            }else{
+            }
+            else
+            {
                     $res_text = urlencode ("Подію Не Видалено! -  ".$result);
                     header("HTTP/1.1 301 Moved Permanently");                    
                     header("Location: error.php?error=$res_text");
                     exit;
             }           
-        }else{
+        }
+        else
+        {
             $res_text = urlencode ("Не вибрана жодна Подія для видалення!");
             header("HTTP/1.1 301 Moved Permanently");                    
             header("Location: error.php?error=$res_text");
@@ -350,40 +354,56 @@ switch ($handler) {
         }       
         break;
 
-        case add_sportsman:         
-           if (isset($_POST['name']))           { $name = $_POST['name'];                  if($name ==''){unset($name);}   }
-           if (isset($_POST['rank']))           { $rank = $_POST['rank'];                  if($rank ==''){unset($rank);} }
-           if (isset($_POST['competitions']))   { $competitions = $_POST['competitions'];  if($competitions ==''){unset($competitions);} }
+        case "add_sportsman":     
+               if (isset($_POST['firstName']))     $firstName = $_POST['firstName'];         if($firstName == '')     unset($firstName);
+               if (isset($_POST['lastName']))      $lastName = $_POST['lastName'];           if($lastName == '')      unset($lastName);
+               if (isset($_POST['secondName']))    $secondName = $_POST['secondName'];       if($secondName == '')    unset($secondName);
+               if (isset($_POST['weight']))        $weight = $_POST['weight'];               if($weight == '')        unset($weight);
+               if (isset($_POST['unitId']))        $unitId = $_POST['unitId'];               if($unitId == '')        unset($unitId);
+               if (isset($_POST['sport_rankId']))  $sport_rankId = $_POST['sport_rankId'];   if(!isset($_POST['sport_rankId']))  $sport_rankId = 'NULL';
+               if (isset($_POST['suddiv_rankId'])) $suddiv_rankId = $_POST['suddiv_rankId']; if(!isset($_POST['suddiv_rankId'])) $suddiv_rankId = 'NULL';               
+               if (isset($_POST['coachId']))       $coachId = $_POST['coachId'];             if(!isset($_POST['coachId']))       $coachId = 'NULL';
+               if (isset($_POST['ztu']))           $ztu = 1; else     $ztu = 0;
+               if (isset($_POST['coach']))         $coach = 1; else   $coach = 0;
+               if (isset($_POST['description']))   $description = $_POST['description'];  
+               if (isset($_POST['telephone']))     $telephone = $_POST['telephone'];         
+               if (isset($_POST['identCode']))     $identCode = $_POST['identCode'];         
          
-           if (isset($name) && isset($rank) && isset($competitions) && $_FILES["myfile"]['size'] > 0)
+           if (isset($firstName) && isset($lastName) && isset($secondName) && $_FILES["myfile"]['size'] > 0)
            {
                    $sportsmen_count = Adminka::getSportsmenCount()+1;        
                    // echo "$news_count, $title, $meta_d, $meta_k, $descr, $author, $text";exit;        
                    $ext = pathinfo($_FILES['myfile']['name'], PATHINFO_EXTENSION);
                    $fileName = $sportsmen_count.".".$ext;                 
-                   $news_directory = $_SERVER['DOCUMENT_ROOT'] ."/images/sportmen/$sportsmen_count/";
-                   if (!is_dir($news_directory)) mkdir($news_directory,0777);           
-                   $path_to_file_tmp = $news_directory . $fileName;
+                   $paticiepents_directory = $_SERVER['DOCUMENT_ROOT'] ."/images/paticiepents/$sportsmen_count/";
+                   if (!is_dir($paticiepents_directory)) mkdir($paticiepents_directory,0777);           
+                   $path_to_file_tmp = $paticiepents_directory . $fileName;
                    if (file_exists($path_to_file_tmp)) unlink($path_to_file_tmp);
                    move_uploaded_file($_FILES["myfile"]['tmp_name'], $path_to_file_tmp);                  
-                   $path_to_newsIcon = $_SERVER['DOCUMENT_ROOT'] ."/images/sportmen/" . $fileName;  
-                   move_uploaded_file($_FILES["myfile"]['tmp_name'], $path_to_newsIcon);                 
-                   Adminka::imgResize($path_to_file_tmp, $path_to_newsIcon, 210, 210, $ext);              
+                   $path_to_Icon = $_SERVER['DOCUMENT_ROOT'] ."/images/paticiepents/" . $fileName;  
+                   move_uploaded_file($_FILES["myfile"]['tmp_name'], $path_to_Icon);                 
+                   Adminka::imgResize($path_to_file_tmp, $path_to_Icon, 210, 210, $ext); 
+                   $img_src = "images/paticiepents/".$fileName;                                
                    
-                   $result = Adminka::addSportsmen($sportsmen_count, $name, $rank, $competitions); 
-                   if($result =="good") {
-                       // Adminka::postInSocNetworks($news_count);
-                       $res_text = urlencode ( "Спортсмен <em>$title</em><br><br> <img src='../images/sportmen/$sportsmen_count.$ext' alt=''><br><p>Добавлено успешно!</p>");
+                   $result = Adminka::addSportsmen($img_src,$firstName,$lastName,$secondName,$weight,$unitId,$sport_rankId,$suddiv_rankId,$coachId,$ztu,$coach,$description,$telephone,$identCode);
+                   if($result =="good") 
+                   {
+                       // Adminka::POSTInSocNetworks($news_count);
+                       $res_text = urlencode ( "Спортсмен <em>$title</em><br><br><br><p>Добавлено успешно!</p>");
                        header("HTTP/1.1 301 Moved Permanently");                    
                        header("Location: result.php?result=$res_text");
                        exit;
-                   }else{
+                   }
+                   else
+                   {
                        $res_text = urlencode ("Спортсмен Не Добавлено! -  ".$result);
                        header("HTTP/1.1 301 Moved Permanently");                    
                        header("Location: error.php?error=$res_text");
                        exit;
                    }            
-           }else{
+           }
+           else
+           {
                $res_text = urlencode ("Не всі параметри заповнені!");
                header("HTTP/1.1 301 Moved Permanently");                    
                header("Location: error.php?error=$res_text");

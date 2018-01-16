@@ -139,15 +139,16 @@ $file_path2 = $_SERVER['DOCUMENT_ROOT'] . "/" . $video_src;
                     return "good";         
           }
           
-          public function addSportsmen($sportsmen_count, $name, $rank, $description)
+          public static function addSportsmen($img,$firstName,$lastName,$secondName,$weight,$unitId,$sport_rankId,$suddiv_rankId,$coachId,$ztu,$coach,$description,$telephone,$identCode)
           {      
                 include ("blocks/php.php");   
-                $query = "INSERT INTO sportmen(id, name, rank,  description ) 
-                  VALUES ($sportsmen_count, '$name','$rank', '$description')";
-                //return "addNews() - ".$query;                 
+                $query = "INSERT INTO paticiepents(`img`,`firstName`,`lastName`,`secondName`,`weight`,`unitId`,`roleId`,`sport_rankId`,
+                `suddiv_rankId`,`coachId`,
+                `ztu`,`coach`,`description`,`telephone`,`identCode`) 
+                  VALUES ('$img', '$firstName','$lastName','$secondName','$weight',$unitId,3,$sport_rankId,$suddiv_rankId,$coachId,$ztu,$coach,'$description','$telephone','$identCode')";
                 $result= mysqli_query ($db, $query);
                 if (!$result)                   
-                    return "addSportsmen(): bad mysqli_query(".mysqli_error().")";
+                    return "addSportsmen(): bad mysqli_query(".mysqli_error($db).")";
                 else 
                     return "good";         
           }
@@ -166,7 +167,7 @@ $file_path2 = $_SERVER['DOCUMENT_ROOT'] . "/" . $video_src;
           public function getSportsmenCount()
           {
                 include ("blocks/php.php");
-                $result = mysqli_query($db, "SELECT MAX(id) as id FROM sportmen");  
+                $result = mysqli_query($db, "SELECT MAX(id) as id FROM paticiepents");  
                 $myrow = mysqli_fetch_array ($result); 
                 do { 
                   $count_news= $myrow['id'];
