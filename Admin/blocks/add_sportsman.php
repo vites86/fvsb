@@ -22,22 +22,32 @@
     $suddiv_row = mysqli_query($db,"SELECT * FROM suddivRanks");
     if (!$suddiv_row) { die('Неверный запрос: ' . mysqli_error($db));}
     $suddiv = "<select class='form-control' style='width:30%;color:black' id='suddiv_rankId' name='suddiv_rankId'> ".
-    "<option value=''>-- Оберіть суддівську категорію --</option>;";
+    "<option value=''>-- Оберіть суддівську категорію --</option>;<option value='0'>-- Не має категорії --</option>";
     while ($line = mysqli_fetch_array($suddiv_row)) 
         {
              $suddiv = $suddiv."<option value=".$line['id']." >".$line['name']."</option>";
         }
     $suddiv = $suddiv."</select>";
 
-    $coach_row = mysqli_query($db,"SELECT * FROM paticiepents where coach is true");
+    $coach_row = mysqli_query($db,"SELECT * FROM paticiepents where coach IS TRUE");
     if (!$coach_row) { die('Неверный запрос: ' . mysqli_error($db));}
-    $coaches = "<select class='form-control' style='width:30%;color:black' id='coachId' name='coachkId'> ".
-    "<option value=''>-- Оберіть тренера --</option>;";
+    $coaches = "<select class='form-control' style='width:30%;color:black' id='coachId' name='coachId'> ".
+    "<option value=''>-- Оберіть тренера --</option>;<option value='0'>-- Не має тренера --</option>";
     while ($line = mysqli_fetch_array($coach_row)) 
         {
-             $coaches = $coaches."<option value=".$line['id']." >".$line['name']."</option>";
+             $coaches = $coaches."<option value=".$line['id']." >".$line['firstName'].' '.$line['lastName']."</option>";
         }
     $coaches = $coaches."</select>";
+
+    $roles_row = mysqli_query($db,"SELECT * FROM roles where id=5 or id=6");
+    if (!$roles_row) { die('Неверный запрос: ' . mysqli_error($db));}
+    $roles = "<select class='form-control' style='width:30%;color:black' id='roleId' name='roleId' required> ".
+    "<option value=''>-- Оберіть роль --</option>;";
+    while ($line = mysqli_fetch_array($roles_row)) 
+        {
+             $roles = $roles."<option value=".$line['id']." >".$line['description']."</option>";
+        }
+    $roles = $roles."</select>";
 ?>
  
  
@@ -56,6 +66,14 @@
                                 <tr>
                                    <td>По-батькові</td>
                                    <td><textarea name="secondName" id="secondName"  cols="100" rows="1" class="form-control" required></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Статус в федерації</td>
+                                    <td><?php echo $roles; ?><br></td>
+                                </tr>
+                                <tr>
+                                   <td>Дата народження</td>
+                                   <td><input type="date" name="birthday" id="birthday" style="width:20% !important" rows="1" class="form-control" required></textarea></td>
                                 </tr>
                                 <tr>
                                    <td>Вага</td>

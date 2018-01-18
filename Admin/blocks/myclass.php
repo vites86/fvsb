@@ -139,13 +139,13 @@ $file_path2 = $_SERVER['DOCUMENT_ROOT'] . "/" . $video_src;
                     return "good";         
           }
           
-          public static function addSportsmen($img,$firstName,$lastName,$secondName,$weight,$unitId,$sport_rankId,$suddiv_rankId,$coachId,$ztu,$coach,$description,$telephone,$identCode)
+          public static function addSportsmen($img,$firstName,$lastName,$secondName,$birthday,$weight,$unitId,$sport_rankId,$suddiv_rankId,$coachId,$ztu,$coach,$description,$telephone,$identCode,$roleId)
           {      
                 include ("blocks/php.php");   
-                $query = "INSERT INTO paticiepents(`img`,`firstName`,`lastName`,`secondName`,`weight`,`unitId`,`roleId`,`sport_rankId`,
+                $query = "INSERT INTO paticiepents(`img`,`firstName`,`lastName`,`secondName`,`birthday`,`weight`,`unitId`,`roleId`,`sport_rankId`,
                 `suddiv_rankId`,`coachId`,
                 `ztu`,`coach`,`description`,`telephone`,`identCode`) 
-                  VALUES ('$img', '$firstName','$lastName','$secondName','$weight',$unitId,3,$sport_rankId,$suddiv_rankId,$coachId,$ztu,$coach,'$description','$telephone','$identCode')";
+                  VALUES ('$img', '$firstName','$lastName','$secondName',CAST('". $birthday ."' AS DATE),'$weight',$unitId,$roleId,$sport_rankId,$suddiv_rankId,$coachId,$ztu,$coach,'$description','$telephone','$identCode')";
                 $result= mysqli_query ($db, $query);
                 if (!$result)                   
                     return "addSportsmen(): bad mysqli_query(".mysqli_error($db).")";

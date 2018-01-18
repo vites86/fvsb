@@ -93,7 +93,7 @@
               </li>
             </ul>
           </li>
-          <li class="">
+          <!-- <li class="">
             <a href="javascript:;">
               <i class="fa fa-pencil"></i>
               <span class="link-title">Спортсмени</span> 
@@ -113,8 +113,37 @@
                   <i class="fa fa-angle-right"></i>&nbsp; Редагувати cпортсмена </a> 
               </li>
             </ul>
-          </li>         
+          </li>          -->
          
+          <li class="">
+            <a href="javascript:;">
+              <i class="fa fa-pencil"></i>
+              <span class="link-title">Члени федерації</span> 
+              <span class="fa arrow"></span> 
+            </a> 
+            <ul>
+              <li>
+                <a href="paticiepents.php">
+                  <i class="fa fa-angle-right"></i>&nbsp; Усі члени </a>                   
+              </li>
+              <li>
+                <a href="sportsmen.php">
+                  <i class="fa fa-angle-right"></i>&nbsp; Спортсмени </a> 
+              </li>
+              <li>
+                <a href="jugges.php">
+                  <i class="fa fa-angle-right"></i>&nbsp; Судді </a> 
+              </li>
+              <li>
+                <a href="headers.php">
+                  <i class="fa fa-angle-right"></i>&nbsp; Керівники підрозділів </a> 
+              </li>
+              <li>
+                <a href="index.php?id=11">
+                  <i class="fa fa-angle-right"></i>&nbsp; Додати члена федерації </a> 
+              </li>
+            </ul>
+          </li>    
          
           <li>
             <a href="php_version.php">

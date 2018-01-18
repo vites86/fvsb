@@ -355,9 +355,11 @@ switch ($handler) {
         break;
 
         case "add_sportsman":     
-               if (isset($_POST['firstName']))     $firstName = $_POST['firstName'];         if($firstName == '')     unset($firstName);
-               if (isset($_POST['lastName']))      $lastName = $_POST['lastName'];           if($lastName == '')      unset($lastName);
-               if (isset($_POST['secondName']))    $secondName = $_POST['secondName'];       if($secondName == '')    unset($secondName);
+               if (isset($_POST['firstName']))     $firstName = str_replace("'", "`", $_POST['firstName']);         if($firstName == '')     unset($firstName);
+               if (isset($_POST['lastName']))      $lastName = str_replace("'", "`", $_POST['lastName']);           if($lastName == '')      unset($lastName);
+               if (isset($_POST['secondName']))    $secondName = str_replace("'", "`", $_POST['secondName']);       if($secondName == '')    unset($secondName);
+               if (isset($_POST['roleId']))        $roleId = $_POST['roleId'];                                      if($roleId == '')    unset($secondName);
+               if (isset($_POST['birthday']))      $birthday = $_POST['birthday'];           if($birthday == '')      unset($birthday);
                if (isset($_POST['weight']))        $weight = $_POST['weight'];               if($weight == '')        unset($weight);
                if (isset($_POST['unitId']))        $unitId = $_POST['unitId'];               if($unitId == '')        unset($unitId);
                if (isset($_POST['sport_rankId']))  $sport_rankId = $_POST['sport_rankId'];   if(!isset($_POST['sport_rankId']))  $sport_rankId = 'NULL';
@@ -365,14 +367,13 @@ switch ($handler) {
                if (isset($_POST['coachId']))       $coachId = $_POST['coachId'];             if(!isset($_POST['coachId']))       $coachId = 'NULL';
                if (isset($_POST['ztu']))           $ztu = 1; else     $ztu = 0;
                if (isset($_POST['coach']))         $coach = 1; else   $coach = 0;
-               if (isset($_POST['description']))   $description = $_POST['description'];  
-               if (isset($_POST['telephone']))     $telephone = $_POST['telephone'];         
-               if (isset($_POST['identCode']))     $identCode = $_POST['identCode'];         
+               if (isset($_POST['description']))   $description = str_replace("'", "`", $_POST['description']);  
+               if (isset($_POST['telephone']))     $telephone = str_replace("'", "`", $_POST['telephone']);         
+               if (isset($_POST['identCode']))     $identCode = str_replace("'", "`", $_POST['identCode']);         
          
-           if (isset($firstName) && isset($lastName) && isset($secondName) && $_FILES["myfile"]['size'] > 0)
+           if (isset($firstName) && isset($lastName) && isset($secondName) && isset($birthday) && isset($roleId) && $_FILES["myfile"]['size'] > 0)
            {
                    $sportsmen_count = Adminka::getSportsmenCount()+1;        
-                   // echo "$news_count, $title, $meta_d, $meta_k, $descr, $author, $text";exit;        
                    $ext = pathinfo($_FILES['myfile']['name'], PATHINFO_EXTENSION);
                    $fileName = $sportsmen_count.".".$ext;                 
                    $paticiepents_directory = $_SERVER['DOCUMENT_ROOT'] ."/images/paticiepents/$sportsmen_count/";
@@ -385,10 +386,9 @@ switch ($handler) {
                    Adminka::imgResize($path_to_file_tmp, $path_to_Icon, 210, 210, $ext); 
                    $img_src = "images/paticiepents/".$fileName;                                
                    
-                   $result = Adminka::addSportsmen($img_src,$firstName,$lastName,$secondName,$weight,$unitId,$sport_rankId,$suddiv_rankId,$coachId,$ztu,$coach,$description,$telephone,$identCode);
+                   $result = Adminka::addSportsmen($img_src,$firstName,$lastName,$secondName,$birthday,$weight,$unitId,$sport_rankId,$suddiv_rankId,$coachId,$ztu,$coach,$description,$telephone,$identCode,$roleId);
                    if($result =="good") 
                    {
-                       // Adminka::POSTInSocNetworks($news_count);
                        $res_text = urlencode ( "Спортсмен <em>$title</em><br><br><br><p>Добавлено успешно!</p>");
                        header("HTTP/1.1 301 Moved Permanently");                    
                        header("Location: result.php?result=$res_text");
