@@ -25,18 +25,18 @@ $units = $units."</select>";
 
 if (!isset($sportsman_id))
 {
-    echo "<form action='index.php?id=12' method='post' enctype='multipart/form-data'>";
+    echo "<form action='index.php?id=15' method='post' enctype='multipart/form-data'>";
     echo $units;
     echo "<br><input type='submit' value='Відібрати' class='btn'>";
     echo "<br><br>";
     $result = mysqli_query($db, "SELECT id, img, lastName, firstName FROM `paticiepents` 
-                                 WHERE unitId like '$unit_id' AND roleId = 6 order by id desc");
+                                 WHERE unitId like '$unit_id' order by id desc");
     if (!$result) { die('Неверный запрос: ' . mysqli_error($db));}
     $myrow = mysqli_fetch_array($result); 
     do 
     {
        printf ("<p><img src='../$myrow[img]' style='height:50px;' />
-         <a href='index.php?id=12&sportsman_id=%s'>%s</a></p><br>",$myrow["id"],$myrow["lastName"].' '.$myrow["firstName"]);
+         <a href='index.php?id=15&sportsman_id=%s'>%s</a></p><br>",$myrow["id"],$myrow["lastName"].' '.$myrow["firstName"]);
     }
     while ($myrow = mysqli_fetch_array($result));
     echo "<br><br><br><br><br><br><br><br>";
@@ -72,7 +72,7 @@ else
      on ptp.suddiv_rankId = sud.id
      LEFT OUTER JOIN paticiepents as coach
      ON ptp.coachId = coach.id 
-     WHERE un.id like '$unit_id' AND ptp.roleId = 6 
+     WHERE un.id like '$unit_id' 
      AND ptp.id = $sportsman_id");
     $myrow = mysqli_fetch_array($result); 
     $img_src = $_SERVER['DOCUMENT_ROOT'] . "" . $myrow['img'];
@@ -196,14 +196,14 @@ else
        <td><?php echo $coaches; ?><br></td>
     </tr>
     <tr>
-    <td>Наявність звання ЗТУ </td>
-    <td><input value="1" type='checkbox' name='ztu' id='ztu' class="radio-inline" <?php echo $myrow['ztu']==1 ? 'checked' : ''; ?>></input></td>
-   
- </tr>
- <tr>
-    <td>Чи є інструктором </td>
-    <td><input value="1" type='checkbox' name='coach' id='coach' class="radio-inline" <?php echo $myrow['coach']==1 ? 'checked' : ''; ?>></input></td>
- </tr>  
+       <td>Наявність звання ЗТУ </td>
+       <td><input value="1" type='checkbox' name='ztu' id='ztu' class="radio-inline" <?php echo $myrow['ztu']==1 ? 'checked' : ''; ?>></input></td>
+      
+    </tr>
+    <tr>
+       <td>Чи є інструктором </td>
+       <td><input value="1" type='checkbox' name='coach' id='coach' class="radio-inline" <?php echo $myrow['coach']==1 ? 'checked' : ''; ?>></input></td>
+    </tr>  
     <tr>
        <td>Ідентифікаційний код </td>
        <td><input value="<?php echo $identCode ?>" name='identCode' id='identCode' class='form-control' required></input></td>

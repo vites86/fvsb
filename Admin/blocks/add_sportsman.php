@@ -22,7 +22,7 @@
     $suddiv_row = mysqli_query($db,"SELECT * FROM suddivRanks");
     if (!$suddiv_row) { die('Неверный запрос: ' . mysqli_error($db));}
     $suddiv = "<select class='form-control' style='width:30%;color:black' id='suddiv_rankId' name='suddiv_rankId'> ".
-    "<option value=''>-- Оберіть суддівську категорію --</option>;<option value='0'>-- Не має категорії --</option>";
+    "<option value=''>-- Оберіть суддівську категорію --</option>;<option value='5'>-- Не має категорії --</option>";
     while ($line = mysqli_fetch_array($suddiv_row)) 
         {
              $suddiv = $suddiv."<option value=".$line['id']." >".$line['name']."</option>";
@@ -73,11 +73,12 @@
                                 </tr>
                                 <tr>
                                    <td>Дата народження</td>
-                                   <td><input type="date" name="birthday" id="birthday" style="width:20% !important" rows="1" class="form-control" required></textarea></td>
+                                   <td>
+                                   <input type="date" name="birthday" id="birthday" style="width:20% !important" rows="1" class="form-control" required></input></td>
                                 </tr>
                                 <tr>
                                    <td>Вага</td>
-                                   <td><textarea name="weight" id="weight"  cols="100" rows="1" class="form-control" required></textarea></td>
+                                   <td><input name="weight" id="weight"  cols="20" rows="1" class="form-control" required></textarea></td>
                                 </tr>
                                 <tr>
                                     <td>Підрозділ</td>

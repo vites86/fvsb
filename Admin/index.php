@@ -32,14 +32,14 @@ if (!isset($id)) { $id = 1; }
             <div class="col-lg-12">
                        <?php                         
                         $result = mysqli_query($db,"SELECT * FROM pages WHERE id=$id");
-                        if (!$result) { die('Неверный запрос: ' . mysql_error());}
+                        if (!$result) { die('Неверный запрос: ' . mysqli_error($db));}
                         $myrow = mysqli_fetch_array ($result); 
                         do {  
                            printf ("<h1 style='color:green' id='bootstrap-admin-template'>%s</h1>", $myrow['name']); 
                            include ("blocks/".$myrow['src']);                          
                          }
                            while ($myrow = mysqli_fetch_array($result));
-                        ?>   <br><br>
+                        ?> 
             </div>
           </div><!-- /.inner -->
         </div><!-- /.outer -->

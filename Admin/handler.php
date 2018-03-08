@@ -412,30 +412,43 @@ switch ($handler) {
            break;
 
                case edit_sportsman:
-               if (isset($_POST['id']))             { $id = $_POST['id'];                      if($id ==''){unset($id);}         }
-               if (isset($_POST['name']))           { $name = $_POST['name'];                  if($name ==''){unset($name);}   }
-               if (isset($_POST['rank']))           { $rank = $_POST['rank'];                  if($rank ==''){unset($rank);} }
-               if (isset($_POST['competitions']))   { $competitions = $_POST['competitions'];  if($competitions ==''){unset($competitions);} }
+               if (isset($_POST['id']))            $id = str_replace("'", "`",$_POST['id']);         if($id == '')     unset($id);
+               if (isset($_POST['firstName']))     $firstName = str_replace("'", "`", $_POST['firstName']);         if($firstName == '')     unset($firstName);
+               if (isset($_POST['lastName']))      $lastName = str_replace("'", "`", $_POST['lastName']);           if($lastName == '')      unset($lastName);
+               if (isset($_POST['secondName']))    $secondName = str_replace("'", "`", $_POST['secondName']);       if($secondName == '')    unset($secondName);
+               if (isset($_POST['roleId']))        $roleId = $_POST['roleId'];                                      if($roleId == '')    unset($secondName);
+               if (isset($_POST['birthday']))      $birthday = $_POST['birthday'];           if($birthday == '')      unset($birthday);
+               if (isset($_POST['weight']))        $weight = $_POST['weight'];               if($weight == '')        unset($weight);
+               if (isset($_POST['unitId']))        $unitId = $_POST['unitId'];               if($unitId == '')        unset($unitId);
+               if (isset($_POST['sport_rankId']))  $sport_rankId = $_POST['sport_rankId'];   if(!isset($_POST['sport_rankId']))  $sport_rankId = 'NULL';
+               if (isset($_POST['suddiv_rankId'])) $suddiv_rankId = $_POST['suddiv_rankId']; if(!isset($_POST['suddiv_rankId'])) $suddiv_rankId = 'NULL';               
+               if (isset($_POST['coachId']))       $coachId = $_POST['coachId'];             if(!isset($_POST['coachId']))       $coachId = 'NULL';
+               if (isset($_POST['ztu']))           $ztu = 1; else     $ztu = 0;
+               if (isset($_POST['coach']))         $coach = 1; else   $coach = 0;
+               if (isset($_POST['description']))   $description = str_replace("'", "`", $_POST['description']);  
+               if (isset($_POST['telephone']))     $telephone = str_replace("'", "`", $_POST['telephone']);         
+               if (isset($_POST['identCode']))     $identCode = str_replace("'", "`", $_POST['identCode']);  
                
-                if (isset($_POST['id']) && isset($name) && isset($rank) && isset($competitions))
-               {
+                if (isset($id) && isset($firstName) && isset($lastName) && isset($secondName) && isset($birthday))
+                {
                    if( $_FILES["myfile"]['size'] > 0)
                    {
                            $ext = pathinfo($_FILES['myfile']['name'], PATHINFO_EXTENSION);
                            $fileName = $id.".".$ext; 
-                           $news_directory = $_SERVER['DOCUMENT_ROOT'] ."/images/sportmen/$id/";
+                           $news_directory = $_SERVER['DOCUMENT_ROOT'] ."/images/paticiepents/$sportsmen_count/";
                            $path_to_file_tmp = $news_directory . $fileName;
                            if (file_exists($path_to_file_tmp)) unlink($path_to_file_tmp);
                            move_uploaded_file($_FILES["myfile"]['tmp_name'], $path_to_file_tmp);                  
-                           $path_to_newsIcon = $_SERVER['DOCUMENT_ROOT'] ."/images/sportmen/" . $fileName;
-                           $img_src = "img/sportmen/".$fileName;                            
+                           $path_to_newsIcon = $_SERVER['DOCUMENT_ROOT'] ."/images/paticiepents/" . $fileName;
+                           $img_src = "images/paticiepents/".$fileName;                            
                            $path_to_oldNewsIcon = $_SERVER['DOCUMENT_ROOT'] ."/".$img_src;
                            if (file_exists($path_to_newsIcon)) unlink($path_to_newsIcon); 
                            if (file_exists($path_to_oldNewsIcon)) unlink($path_to_oldNewsIcon); 
                            move_uploaded_file($_FILES["myfile"]['tmp_name'], $path_to_newsIcon);                 
                            Adminka::imgResize($path_to_file_tmp, $path_to_newsIcon, 310, 310, $ext); 
+                           $img_src = "images/paticiepents/".$fileName; 
                    }        
-                   $result = Adminka::updateSportman($id, $name, $rank, $competitions);
+                   $result = Adminka::updateSportman($id,$img_src,$firstName,$lastName,$secondName,$birthday,$weight,$unitId,$sport_rankId,$suddiv_rankId,$coachId,$ztu,$coach,$description,$telephone,$identCode,$roleId);
                    if($result=="good") 
                    {
                            $res_text = urlencode ( "Обновлено успiшно!");

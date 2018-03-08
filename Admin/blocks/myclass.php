@@ -327,27 +327,40 @@ public static function updateEvent($id, $title, $meta_d, $meta_k, $description, 
     } 
 }
 
-public function updateSportman($id, $name, $rank, $competitions)
+public static function updateSportman($id,$img_src,$firstName,$lastName,$secondName,$birthday,$weight,$unitId,$sport_rankId,$suddiv_rankId,$coachId,$ztu,$coach,$description,$telephone,$identCode,$roleId)
 { 
    include ("blocks/php.php");
-   if (isset($id) && isset($name) && isset($rank) && isset($competitions))
+   if (isset($firstName) && isset($lastName) && isset($secondName) && isset($weight))
     {      
-        $name = str_replace("'", "`", $name);
-        $rank = str_replace("'", "`", $rank);
-        $competitions = str_replace("'", "`", $competitions);
+        $firstName = str_replace("'", "`", $firstName);
+        $lastName = str_replace("'", "`", $lastName);
+        $secondName = str_replace("'", "`", $secondName);
+        $description = str_replace("'", "`", $description);        
+        $img_src_raw = !isset($img_src) ? '' : "`img_src`= '$img_src',";
+
+        $result= mysqli_query ($db, "UPDATE paticiepents SET ".$img_src_raw."
+        `firstName`= '$firstName',
+        `lastName`= '$lastName',
+        `secondName`= '$secondName',
+        `birthday`= CAST('". $birthday ."' AS DATE),
+        `weight`= '$weight',
+        `unitId`= $unitId,
+        `sport_rankId`= $sport_rankId,
+        `suddiv_rankId`= $suddiv_rankId,
+        `coachId`= $coachId,
+        `ztu`= '$ztu',
+        `coach`= '$coach',
+        `description`= '$description',
+        `telephone`= '$telephone',
+        `identCode`= '$identCode',
+        `roleId`= $roleId 
+        WHERE id=$id ");
+        if ($result) return "good";
+        else return "updateSportman(): bad mysqli_query(".mysqli_error($db).")";;
         
-        $result= mysqli_query ($db, "UPDATE sportmen SET `name`='$name', `rank`='$rank', `description`='$competitions' WHERE id='$id' ");
-        if ($result) {
-            return "good";
-        }
-        else{
-            return "updateSportman(): bad mysqli_query(".mysqli_error().")";;
-        }
     }   
-    else
-    {
-       return "Введена неповна інформація!!!";
-    } 
+    else return "Введена неповна інформація!!!";
+     
 }
 
 public function delSportmen($id)
