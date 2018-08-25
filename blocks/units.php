@@ -16,18 +16,19 @@
           </li>
           <li>- <a href="units.php#dnr">Дніпропетровська область</a>
             <br> - <a href="units.php#sm">Сумська область</a>
-            <br> - <a href="#">Чернігівська область</a>
+            <br> - <a href="units.php#kwc">м.Київ </a>
             <br>
             <!-- <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="images/partners/partner3.png"></a></li> -->
           </li>
-          <li>- <a href="units.php#krg">Кропивницька область</a>
+          <li>- <a href="units.php#krg">Кіровоградська область</a>
             <br> - <a href="units.php#khs">Херсонська область</a>
             <br> - <a href="units.php#zht">Житомирська область</a>
-            <br>
+            <br> - <a href="units.php#chrng">Чернігівська область </a>
             <!-- <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="images/partners/partner4.png"></a> -->
           </li>
           <li>- <a href="units.php#pl">Полтавська область </a>
             <br> - <a href="units.php#zp">Запорізька область</a>
             <br> - <a href="units.php#kv">Київська область </a>
-            <br>
+            <br> - <a href="units.php#zkp">Закарпатська область </a>
+           
           </li>
