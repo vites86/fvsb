@@ -1,5 +1,5 @@
 <? 
-    $db = mysqli_connect("localhost","vites","30041986","fvsb");
+    $db = mysqli_connect("db20.freehost.com.ua","fvsb_vites","vites1986","fvsb_db");
     $db->set_charset('utf8');
     if (!$db) 
     { 

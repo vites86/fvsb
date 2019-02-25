@@ -10,7 +10,7 @@
     <?php include("blocks/header.php") ;?>
 	<script>
         $(window).load(function(){   
-           document.getElementById("header_about").className      = 'active';
+           document.getElementById("header_about").className = 'active';
 });
       </script>
   </header>
