@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <?php include("blocks/header_links.php"); ?>  
-    <title>Підрозділи</title>   
+    <title>Документи</title>   
   </head>
   <body>
 	<header>		
@@ -248,7 +248,9 @@
 								<i class="fa fa-file-text"></i>						
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading">Логотип ВФВСБ</h4>
+							<h4 class="media-heading">
+								<a href="files/msac.cdr" target="_blank" download>Логотип виду спорту - вектроний формат</a>
+								</h4>
 							</div>
 						</li>
 						<li>
@@ -256,7 +258,9 @@
 								<i class="fa fa-file-text"></i>						
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading">Логотип Міжнародного Союзу громадських організацій «Розвитку військово-спортивних багатоборств»</h4>
+							<h4 class="media-heading">
+								<a href="files/msac.png" target="_blank">Логотип виду спорту - картинка</a>
+								</h4>
 							</div>
 						</li>
 						<li>
@@ -264,7 +268,9 @@
 								<i class="fa fa-file-text"></i>						
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading">Нагрудний знак Майстер спорту України</h4>
+							<h4 class="media-heading">
+							<a href="images/msu.png" target="_blank">ЗРАЗОК нагрудного значка "Майстер спорту України"</a>
+								</h4>
 							</div>
 						</li>
 						<li>
@@ -272,7 +278,9 @@
 								<i class="fa fa-file-text"></i>						
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading">Посвідчення судді</h4>
+							<h4 class="media-heading">
+							<a href="images/msumk.png" target="_blank">ЗРАЗОК нагрудного значка "Майстер спорту України міжнародного класу"</a>
+								</h4>
 							</div>
 						</li>
 					</ul>
@@ -293,7 +301,9 @@
 								<i class="fa fa-file-text"></i>						
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading">Мішень MSAC</h4>
+								<h4 class="media-heading">
+								<a href="files/Addon_10_(msac-1).doc" target="_blank">Мішень MSAC - опис</a>
+								</h4>
 							</div>
 						</li>
 						<li>
@@ -301,7 +311,50 @@
 								<i class="fa fa-file-text"></i>						
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading">Кваліфікаційна книжка спортсмена</h4>
+							<h4 class="media-heading">
+							<a href="files/mishens.docx" target="_blank">Мішень MSAC - для друку/тренувань</a>
+								</h4>
+							</div>
+						</li>
+						<li>
+							<div class="media-left">
+								<i class="fa fa-file-text"></i>						
+							</div>
+							<div class="media-body">								
+								<h4 class="media-heading">
+								<a href="files/passport1.pdf" target="_blank">Кваліфікаційна книжка спортсмена - титильна сторінка</a>
+								</h4>
+							</div>
+						</li>
+						<li>
+							<div class="media-left">
+								<i class="fa fa-file-text"></i>						
+							</div>
+							<div class="media-body">								
+								<h4 class="media-heading">
+								<a href="files/passport2.pdf" target="_blank">Кваліфікаційна книжка спортсмена - сторінка 1</a>
+								</h4>
+							</div>
+						</li>
+						<li>
+							<div class="media-left">
+								<i class="fa fa-file-text"></i>						
+							</div>
+							<div class="media-body">								
+								<h4 class="media-heading">
+								<a href="files/passport3.pdf" target="_blank">Кваліфікаційна книжка спортсмена - сторінка 2</a>
+								</h4>
+							</div>
+						</li>
+						<li>
+							<div class="media-left">
+								<i class="fa fa-file-text"></i>						
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">
+								<a href="http://zakon.rada.gov.ua/laws/show/z0497-14#n1264" target="_blank">
+								Кваліфікаційні норми та вимоги Єдиної спортивної класифікації України з неолімпійських видів спорту</a>
+								</h4>
 							</div>
 						</li>
 						<!--<li>

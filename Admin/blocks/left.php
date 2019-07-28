@@ -157,26 +157,11 @@
             </ul>
           </li>    
          
-          <li class="">
-            <a href="javascript:;">
-              <i class="fa fa-building "></i>
-              <span class="link-title">Змагання</span> 
-              <span class="fa arrow"></span> 
+          <li>
+            <a href="php_version.php">
+              <i class="fa fa-file"></i>
+              <span class="link-title">PHP version</span> 
             </a> 
-            <ul>
-              <li>
-                <a href="index.php?id=8">
-                  <i class="fa fa-angle-right"></i>&nbsp; Створити </a> 
-              </li>
-              <li>
-                <a href="index.php?id=9">
-                  <i class="fa fa-angle-right"></i>&nbsp; Переглянути / редагувати </a> 
-              </li>
-              <li>
-                <a href="index.php?id=10">
-                  <i class="fa fa-angle-right"></i>&nbsp; Видалити подію </a> 
-              </li>      
-            </ul>
           </li>
          <!--  <li>
             <a href="typography.html">
