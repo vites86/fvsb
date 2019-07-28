@@ -88,10 +88,19 @@
           <h2>Досягнення</h2>
           <p>У «ВФВСБ» на даний момент підготовлені:</p>
           <div class="progress-wrap">
-            <h3 style="margin-bottom: 35px !important;">Заслужених тренерів України</h3>
+            <h4 style="margin-bottom: 35px !important;">Заслужених тренерів України</h4>
             <div class="progress">
               <div class="progress-bar  color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 18%">
-                <span class="bar-width">9</span>
+                <span class="bar-width">11</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="progress-wrap">
+            <h4 style="margin-bottom: 35px !important;">Заслужених майстрів спорту України</h4>
+            <div class="progress">
+              <div class="progress-bar  color2" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 18%">
+                <span class="bar-width">4</span>
               </div>
             </div>
           </div>
@@ -100,7 +109,7 @@
             <h4 style="margin-bottom: 35px !important;">Майстрів спорту міжнародного класу</h4>
             <div class="progress">
               <div class="progress-bar color2" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                <span class="bar-width">20</span>
+                <span class="bar-width">28</span>
               </div>
             </div>
           </div>
@@ -109,7 +118,7 @@
             <h4>Майстрів спорту України</h4>
             <div class="progress">
               <div class="progress-bar color3" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                <span class="bar-width">200</span>
+                <span class="bar-width">211</span>
               </div>
             </div>
           </div>
@@ -118,7 +127,7 @@
             <h4 style="margin-bottom: 35px !important;">суддів міжнародної категорії</h4>
             <div class="progress">
               <div class="progress-bar color4" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100" style="width: 14%">
-                <span class="bar-width">10</span>
+                <span class="bar-width">11</span>
               </div>
             </div>
           </div>
@@ -127,7 +136,7 @@
             <h4 style="margin-bottom: 35px !important;">суддів Національної категорії</h4>
             <div class="progress">
               <div class="progress-bar color1" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-                <span class="bar-width">9</span>
+                <span class="bar-width">15</span>
               </div>
             </div>
           </div>
@@ -136,13 +145,13 @@
             <h4>суддів 1-3 їх категорій</h4>
             <div class="progress">
               <div class="progress-bar color2" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                <span class="bar-width"> > 150</span>
+                <span class="bar-width"> > 180</span>
               </div>
             </div>
           </div>
           <img style="width: 100%; margin-top: 10px;" src="images/military2.jpg">
           <img style="width: 100%; margin-top: 10px;" src="images/poltava.jpg">
-          <img style="width: 100%; margin-top: 10px;" src="images/cherson.jpg">
+          <img style="width: 100%; margin-top: 10px;" src="images/khmeln-about.jpg">
           <img style="width: 100%; margin-top: 10px;" src="images/zbory2016.jpg">
         </div>
       </div>
