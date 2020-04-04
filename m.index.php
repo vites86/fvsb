@@ -142,13 +142,13 @@
            printf("
            <div class='col-sm-12'>
              <a target='_blank' href='news_one.php?id=%s'>
-               <img src='images/news/%s.png' class='img-responsive' style='width:100%%;'/>
+               <img src='%s' class='img-responsive' style='width:100%%;'/>
                <h3>%s</h3>
                <p>%s</p>
                <input type='button' value='Детальніше' 
                class='btn-slide animation animated-item-3 btn btn-success' href='news_one.php?id=%s'></input>               
              </a>        
-           </div><hr>", $myrow['id'], $myrow['id'], $myrow['title'], $myrow['description'], $myrow['id']);
+           </div><hr>", $myrow['id'], $myrow['img'], $myrow['title'], $myrow['description'], $myrow['id']);
                } 
              mysqli_free_result($result); 
 	       }
@@ -207,7 +207,7 @@
                          printf("  
                          <div class='col-sm-12'>
                            <a target='_blank' href='events_one.php?id=%s'>
-                             <img src='images/events/%s.png' class='img-responsive' style='width:100%%;'/>
+                             <img src='%s' class='img-responsive' style='width:100%%;'/>
                              <h3>%s</h3>
                              <p><b>Дата проведення</b>: %s</p>
                              <p><b>Місце</b>: %s</p>
@@ -215,7 +215,7 @@
                              class='btn-slide animation animated-item-3 btn btn-success' href='events_one.php?id=%s'></input>               
                            </a>      
                          </div><hr>
-                         ", $myrow['id'], $myrow['id'], $myrow['title'], $myrow['eurodate'], $myrow['place'], $myrow['id']);
+                         ", $myrow['id'], $myrow['img'], $myrow['title'], $myrow['eurodate'], $myrow['place'], $myrow['id']);
                              } 
                            mysqli_free_result($result); 
 	                     }
@@ -237,11 +237,11 @@
                    <div class="center">
                      <h2>Контакти</h2>                     
                      <div style="color:black; list-style-type:none; text-align:center;" >
-                       <li><b>Президент федерації</b>: <br>Зайцев Сергій Васильович</li>
-                       <li><img src="images/zaicev2.png" style="width:20%;" alt=""></li>
-                       <li><b>тел.</b>: (063) 119 57 15</li>
-                       <li><b>email</b>: president.fvsb@gmail.com</li>
-                       <li><b>адреса</b>: м. Харків</li>
+                       <li><b>Президент федерації</b>: <br>Ярошевський Андрій Володимирович</li>
+                       <li><img src="images/yaroshevskiy.png" style="width:20%;" alt=""></li>
+                       <li><b>тел.</b>: (067) 151 96 65</li>
+                       <li><b>email</b>: kempovsb@gmail.com</li>
+                       <li><b>адреса</b>:  м. Олександрія Кіровоградської області</li>
                      </div>
                    </div>
                  </div>

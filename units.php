@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <meta name="description" content="Відокремлені підрозділи Всеукраїнської федерації ВСБ" />
+  <meta name="keywords" content="msac, всб, військово-спортивні багатоборства, стрільба, бій, всестильовий бій, відокремлені підрозділи" />
+  <meta name="robots" content="units.php">
+   <meta property="og:title" content="Підрозділи ВФ ВСБ" />
+	<meta property="og:description" content="Відокремлені підрозділи Всеукраїнської федерації ВСБ" />
+	<meta property="og:image" content="http://fvsb.com.ua/images/logo.png" />
+	<meta property="og:url" content=http://fvsb.com.ua/units.php />
+	<meta property="og:type" content="website" />
+ 
     <?php include("blocks/header_links.php"); ?>  
     <title>Підрозділи</title>   
   </head>
@@ -91,64 +100,6 @@
 	   }
 	   mysqli_close($db); 
 	?>
-	
-	<!--<div class="services">
-		<div class="container">
-			<h3>Київська область</h3>
-			<hr>
-			<div class="col-md-3">
-				<img src="images/units/kv/1.png" class="img-responsive" style="width:100%">
-			</div>
-			
-			<div class="col-md-9">
-				<div class="media">
-					<ul>
-                        <li>
-							<div class="media-body">
-								<h5 class="media-heading">Голова:</h5>
-							</div>
-						</li>
-                        <li>
-							<div class="media-left">
-								<i class="fa fa-user"></i>						
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">Пристінський Олександр Васильович</h4>
-							</div>
-						</li>
-						<li>
-							<div class="media-left">
-								<i class="fa fa-pencil"></i>						
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">(097) 405 31 93</h4>
-							</div>
-						</li>
-						<li>
-							<div class="media-left">
-								<i class="fa fa-envelope-o"></i>						
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">fvsb.kiev@ukr.net</h4>
-							</div>
-						</li>
-						<li>
-							<div class="media-left">
-								<i class="fa fa-globe"></i>						
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading"><a href="http://fvsb.kiev.ua" target="_blank">fvsb.kiev.net.ua</a></h4>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>	
-	
-	<div class="sub-services">		
-	</div>-->
-	
 	
 	<footer>
 		   <? include("blocks/footer.php"); ?>

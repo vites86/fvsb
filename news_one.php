@@ -96,9 +96,11 @@ if ( $detect->isMobile() ) {header('Location: m.news_one.php?id='.$id); exit; }
 		  printf("<div class='blog-item'>
                         <div class='row'>   
                             <div class='col-xs-12 col-sm-12 blog-content'>
-                               <div style='color:black;font-size:16px; margin-bottom:30px; '>%s</div>
+                               <div style='color:black; margin-bottom:30px; '>
+                               <font size='9'>%s</font></div>
+                               <hr>
                                <span id='publish_date'>%s</span>
-                               <span><i class='fa'>#</i><a href='#'><b>%s</b></a></span>                                    
+                               <span><i class='fa'>#</i><a href='#'><b>%s</b></a></span>  
                                <span><i class='fa fa-user'></i> <a href='#'>Адміністратор</a></span>
                                <span><i class='fa fa-comment'></i> <a href='#'>0 Коментарів</a></span>
                                <span><i class='fa fa-heart'></i><a href='#'>0 Likes</a></span>
@@ -121,7 +123,7 @@ if ( $detect->isMobile() ) {header('Location: m.news_one.php?id='.$id); exit; }
             if (($files[$i] != ".") && ($files[$i] != "..")) { // Текущий каталог и родительский пропускаем
                 $path = $dir.$files[$i]; // Получаем путь к картинке
                 echo "<a style='margin-top:150px;' class='gallery'  rel='group' title='фото номер $k' href='$path'>
-                <img style='height:180px; width:260px; margin:20px 20px 0 0' src='$path' />
+                <img style='height:141px; width:260px; margin:20px 20px 0 0' src='$path' />
                 </a>";
                 $k++; // Увеличиваем вспомогательный счётчик
             }
