@@ -3,6 +3,13 @@
   <head>
     <?php include("blocks/header_links.php"); ?>  
     <title>Документи</title>   
+	<meta name="description" content="Документи Всеукраїнської федерації Військово-спортивних багатоборств" />
+    <meta name="keywords" content="msac, всб, військово-спортивні багатоборства, стрільба, бій, всестильовий бій" />
+    <meta property="og:title" content="ВФ ВСБ | Документи" />
+	<meta property="og:description" content="Документи Всеукраїнської федерації Військово-спортивних багатоборств" />
+	<meta property="og:image" content="http://fvsb.com.ua/images/docs.png" />
+    <meta property="og:url" content=http://fvsb.com.ua/docs.php />
+	<meta property="og:type" content="website" />
   </head>
   <body>
 	<header>		
@@ -104,7 +111,7 @@
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">
-								<a href="files/legkokontaktnuy_vyd_programmu.doc" target="_blank">Програма екзаменаційних вимог ТПА по "Бойовому багатоборству" "Легкоконтактний вид програми"</a>
+								<a href="files/legkokontaktnuy_vyd_programmu.pdf" target="_blank">Програма екзаменаційних вимог ТПА по "Бойовому багатоборству" "Легкоконтактний вид програми"</a>
 								</h4>
 							</div>
 						</li>
@@ -165,7 +172,7 @@
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">
-								<a href="files/pravyla_zmagan.pdf" target="_blank">Правила спортивних змагань з військово-спортивних багатоборств</a>
+								<a href="https://zakon.rada.gov.ua/laws/show/z0504-14#n1450" target="_blank">Правила спортивних змагань з військово-спортивних багатоборств</a>
 								</h4>
 							</div>
 						</li>

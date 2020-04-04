@@ -261,11 +261,11 @@
                    <div class="center">
                      <h2>Контакти</h2>                     
                      <ul style="color:black; list-style-type:none; text-align:center;" >
-                       <li><b>Президент федерації</b>: <br>Зайцев Сергій Васильович</li>
-                       <li><img src="../images/zaicev2.png" style="width:20%;" alt=""></li>
-                       <li><b>тел.</b>: (063) 119 57 15</li>
-                       <li><b>email</b>: president.fvsb@gmail.com</li>
-                       <li><b>адреса</b>: м. Харків</li>
+                       <li><b>Президент федерації</b>: <br>Ярошевський Андрій Володимирович</li>
+                       <li><img src="images/yaroshevskiy.png" style="width:20%;" alt=""></li>
+                       <li><b>тел.</b>: (067) 151 96 65</li>
+                       <li><b>email</b>: kempovsb@gmail.com</li>
+                       <li><b>адреса</b>:  м. Олександрія Кіровоградської області</li>
                      </ul>
                    </div>
                  </div>

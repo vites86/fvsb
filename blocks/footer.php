@@ -1,34 +1,29 @@
- <div class="footer">
-      <div class="container">
-        <div class="social-icon">
-          <div class="col-md-4">
-            <ul class="social-network">
-              <li><a target="_blank" href="https://www.facebook.com/groups/522443294588536/" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-              <li><a target="_blank" href="https://aboutme.google.com/u/0/b/112112933329890737693/#profile_photo" class="gplus tool-tip" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-              <li><a href="#" class="linkedin tool-tip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-              <li><a target="_blank" href="https://www.youtube.com/channel/UCv1LQdomI9LARwiq4cGXvOQ" class="ytube tool-tip" title="You Tube"><i class="fa fa-youtube-play"></i></a></li>
-            </ul>
-          </div>
+<div class="footer">
+        <div class="row">           
+            <div class="social-icon">
+                <div class="col-sm-12">
+                       <ul class="social-network" style="text-align:center;">
+                         <li><a target="_blank" href="https://www.facebook.com/groups/522443294588536/" title="Facebook">
+                         <img src="images/social/facebook.png"/></a></li>
+                         <li><a target="_blank" href="https://aboutme.google.com/u/0/b/112112933329890737693/#profile_photo" title="Google Plus">
+                         <img src="images/social/google.png" alt=""></i></a></li>
+                         <li><a target="_blank" href="https://www.youtube.com/channel/UCv1LQdomI9LARwiq4cGXvOQ" class="ytube tool-tip" title="You Tube">
+                         <img src="images/social/youtube.png" alt=""></i></a></li>
+                       </ul>
+                </div>
+            </div>
         </div>
-
-        <div class="col-md-4 col-md-offset-4">
-          <div class="copyright">
-            &copy; Company Theme. All Rights Reserved.
+        <div class="row" >
+        <div class="col-md-12">
+          <div class="copyright" style="text-align:center !important">
+               &copy; Всі права захищені.
             <div class="credits">
-              <!--
-All the links in the footer should remain intact.
-You can delete the links only if you purchased the pro version.
-    Licensing information: https://bootstrapmade.com/license/
-Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Company
--->
-              <a href="#">Made</a> by <a target="_blank" href="http://vdstudio.net.ua/">VD Studio</a>
+              <a href="#">Сайт розроблено </a> компанією <a target="_blank" href="http://vdstudio.net.ua/">VD Studio</a>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="pull-right">
-        <a href="#home" class="scrollup"><i class="fa fa-angle-up fa-3x"></i></a>
-      </div>
-    </div>
+        <div class="pull-right">
+           <a href="#home" class="scrollup"><i class="fa fa-angle-up fa-3x"></i></a>
+         </div>
+        </div>
+  </div>

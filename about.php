@@ -3,6 +3,14 @@
 
 <head>
   <title>Про нас</title>
+  <meta name="description" content="Про Всеукраїнську федерацію Військово-спортивних багатоборств" />
+  <meta name="keywords" content="msac, всб, військово-спортивні багатоборства, стрільба, бій, всестильовий бій" />
+  <meta property="og:title" content="ВФ ВСБ | MSAC" />
+	<meta property="og:description" content="Про Всеукраїнську федерацію Військово-спортивних багатоборств" />
+	<meta property="og:image" content="http://fvsb.com.ua/images/yaroshevskiy.png" />
+  <meta property="og:url" content=http://fvsb.com.ua/about.php />
+	<meta property="og:type" content="website" />
+
   <?php include("blocks/header_links.php") ;?>   
 </head>
 <body>
@@ -29,7 +37,7 @@
       <h3><span style="color:grey; margin-bottom:25px;">громадська організація</span><br>
 	      <hr style="margin: 3px 0px 3px 0px !important;">
           Всеукраїнська Федерація військово-спортивних багатоборств <b>(ВФВСБ)</b>
-	  </h3>
+	    </h3>
       <hr>
       <div class="col-md-7 wow fadeInDown justif" data-wow-duration="1000ms" data-wow-delay="300ms">
         <img src="images/world.png" class="img-responsive">
@@ -42,11 +50,10 @@
           <img src="images/zaicev.png" style="width: 20%; float: left; margin-right: 10px;">
           У 2005 році «ВФВСБ» стала одним із засновників Міжнародного Союзу громадських організацій «Розвитку військово - спортивних багатоборств»,&nbsp; &nbsp;президентом
           &nbsp;якого&nbsp;&nbsp; став <b>Зайцев С.В.</b> (Засновник бойового багатоборства, заслужений тренер України, суддя міжнародної категорії, чорний пояс 10 дан, майстер спорту), 
-          першим віце-президентом став <b>Федорцов О.П.</b> - Засновник бойового
-          багатоборства, суддя міжнародної категорії, чорний пояс 8 дан.</p>
-        <p>
+          першим віце-президентом став <b>Федорцов О.П.</b> - Засновник бойового багатоборства, суддя міжнародної категорії, чорний пояс 8 дан.</p>
+        <p>В 2017 році міжнародна федерація була перейменована на "Громадська асоціація "Міжнародна організація Військово-спортивних багатоборств""</p>
 		<!--<img src="images/logo.png" style="width: 35%; float: right; margin-left: 50px; margin-top:25px;">-->
-		       Основна мета діяльності організації – задоволення та захист законних соціальних, економічних, творчих, спортивних та інших спільних 
+        <p> Основна мета діяльності організації – задоволення та захист законних соціальних, економічних, творчих, спортивних та інших спільних 
            інтересів членів Організації та сприяння розвитку військово-спортивних багатоборств на території України, підвищенню ролі цього виду 
            спорту у всебічному і гармонійному розвитку особистості, зміцнення здоров'я, формування здорового способу життя. Військово-патріотичне 
            виховання дітей та молоді, пропаганда здорового способу життя і сприяння підготовці молоді до служби у лавах Збройних Сил України.</p>
@@ -74,14 +81,18 @@
           <br> - У військово-патріотичних заходах
           <br>
         </p>
-        <p>Правила спортивних змагань з військово-спортивних багатоборств затверджені <a style="color:blue" target="_blank" href="http://zakon2.rada.gov.ua/laws/show/z0504-14">Наказом</a> від 22.04.2014  № 1283 Міністерства молоді та спорту</p>
+        <p>Правила спортивних змагань з військово-спортивних багатоборств затверджені <a style="color:blue" target="_blank" href="http://zakon2.rada.gov.ua/laws/show/z0504-14">Наказом</a> від 22.04.2014  № 1283 Міністерства молоді та спорту України.
+        В 2019 році у Правила були внесені зміни згідно з <a style='color:blue' href="https://zakon.rada.gov.ua/laws/show/z0484-19#n2">Наказом Міністерства молоді та спорту України № 1846 від 15.04.2019</a>
+        </p>
+        <p>Поточна редакція Правил спортивних змагань з ВСБ доступна на сайті <a style="color:blue" target="_blank" href="http://zakon2.rada.gov.ua/laws/show/z0504-14">Верховної ради України.</a></p>
         <p>
           Спортивні звання та розряди з військово-спортивних багатоборств присвоюються відповідно до <a style="color:blue" target="_blank" href="http://zakon2.rada.gov.ua/laws/show/z0497-14">Наказу</a> №1305 Міністерства молоді та спорту України від 24.04.14 
           "Про затвердження Кваліфікаційних норм та вимог Єдиної спортивної класифікації України з неолімпійських видів спорту"
         </p>
         <p><img src="images/fedorcov.png" style="width: 7%; float: left;margin: 5px 5px 5px 0px">Перший віце-перзидент - Олександр Федорцов, засновник бойового двоборства, суддя міжнародної категорії (чорний пояс 8-й дан).
           <br> Телефони: (057) 343-67-76, (066) 748-76-81 (мобильный)</p>
-        <p>Центральний офіс Всеукраїнської федерації військово-спортивних багатоборств знаходиться в Україні, м.Харків.</p>
+          <p>Центральний офіс Всеукраїнської федерації військово-спортивних багатоборств знаходиться в Україні, м.Харків.</p>
+          <p>Офіційний сайт Громадської асоціації `Міжнародна організація Військово-спортивних багатоборств` - <a style='color:blue' href='http://io-msac.com'>www.io-msac.com</a>.</p>
       </div>
       <div class="col-md-5 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
         <div class="skill">
@@ -91,7 +102,7 @@
             <h4 style="margin-bottom: 35px !important;">Заслужених тренерів України</h4>
             <div class="progress">
               <div class="progress-bar  color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 18%">
-                <span class="bar-width">11</span>
+                <span class="bar-width">12</span>
               </div>
             </div>
           </div>
@@ -109,7 +120,7 @@
             <h4 style="margin-bottom: 35px !important;">Майстрів спорту міжнародного класу</h4>
             <div class="progress">
               <div class="progress-bar color2" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                <span class="bar-width">28</span>
+                <span class="bar-width">42</span>
               </div>
             </div>
           </div>
@@ -118,7 +129,7 @@
             <h4>Майстрів спорту України</h4>
             <div class="progress">
               <div class="progress-bar color3" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                <span class="bar-width">211</span>
+                <span class="bar-width">247</span>
               </div>
             </div>
           </div>
@@ -163,31 +174,71 @@
       <h3 style='text-align:center'>Керівництво Федерації</h3>
       <div class="text-center">
         <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <img src="images/services/2.png" alt="">
-          <h4>Федорцов Олександр Петрович</h4>
-          <p>Віце - Президент Федерації
-            <br> чорний пояс, 8 дан
-            <br>Суддя міжнародної категорії </p>
+          <img  style="width:300px;height:300px;" src="images/levin.png" alt="levin">
+          <h4>Левін Володимир Іванович</h4>
+            <p>Президент Міжнародної Федерації
+            <br> чорний пояс, 5 дан
+            <br>Майстер спорту України, Заслужений тренер України, Суддя міжнародної категорії
+            <br>тел.: + 38(093) 18-39-194
+            <br>levin.v.i.1977.01.27@gmail.com</p>
         </div>
         <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-          <img src="images/services/1.png" alt="">
-          <h4>Зайцев Сергій Васильович</h4>
-          <p>Президент Федерації
-            <br> чорний пояс, 10 дан
-            <br>Майстер спорту України
-            <br>Заслужений тренер України</p>
+          <img style="width:300px;height:300px;" src="/images/yaroshevskiy.png" alt="Ярошевський А.В.">
+          <h4>Ярошевський Андрій Володимирович</h4>
+          <p>Президент Всеукраїнської Федерації
+            <br>чорний пояс, 7 дан
+            <br>Майстер спорту України, Заслужений тренер України, Суддя міжнародної категорії
+            <br>тел.: + 38(067) 151 96 65
+            <br>kempovsb@gmail.com</p>
         </div>      
       </div>
     </div>
   </div>
 
+  <div class="">
+    <div class="container">
+      <h3 style='text-align:center'><b>Грандмайстри Федерації</b></h3>
+      <div class="text-center">
+         <div class="row">
+                        <div class="col-md-6">
+                            <div>
+                                <h2><b>Грандмайстер</b> <br>ударної техніки:</h2>
+                            </div>
+                            <div>
+                                <h3><em>Ришковець Андрій (7 dan)</em></h2>
+                            </div>
+                            <img src="/images/ryshkovets.png"><br><br>
+                            <p>
+                            <span>тел.: + 38(063) 11-95-715 </span><br>
+                            <span> <a href="mailto:rishkovets.a.m@gmail.com">rishkovets.a.m@gmail.com</a></span>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <h2><b>Грандмайстер</b> <br>техніки боротьби:</h2>
+                            </div>
+                            <div>
+                                <h3><em>Грімов Сергій (7 dan)</em></h2>
+                            </div>
+                            <img src="/images/grimov.png"><br><br>
+                            <p>
+                                <span>тел.: + 38(066) 422 75 27 </span><br>
+                                <span><a href="mailto:grimov-sergeyy@rambler.ua">grimov-sergeyy@rambler.ua</a></span>
+                            </p>
+                        </div>                       
+         </div> 
+        </div>      
+        </div>
+      </div>
+      </div>
+  
+  
+  
   <footer>
-    <? include("blocks/footer.php"); ?>
+    <?php include("blocks/footer.php"); ?>
   </footer>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery-2.1.1.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.prettyPhoto.js"></script>
   <script src="js/jquery.isotope.min.js"></script>
