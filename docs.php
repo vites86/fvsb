@@ -213,12 +213,14 @@
 			<div class="col-md-12">				
 				<div class="media">
 					<ul>
-						<!--<li>
+						<li>
 							<div class="media-left">
 								<i class="fa fa-file-text"></i>						
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading">Документ2</h4>
+						    	<h4 class="media-heading">
+								     <a href="documents/polozhennya_pro_suddivstvo.doc" target="_blank">Порядок присвоєння кваліфікаційних категорій спортивним суддям</a>
+								</h4>
 							</div>
 						</li>
 						<li>
@@ -226,17 +228,21 @@
 								<i class="fa fa-file-text"></i>						
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading">Документ3</h4>
+							    <h4 class="media-heading">
+								     <a href="documents/nakaz_13_suddi_25082019.doc" target="_blank">НАКАЗ №13 від 25.08.2019 ПРО ПРИСВОЄННЯ СУДДІВСЬКИХ КАТЕГОРІЙ</a>
+								</h4>
 							</div>
 						</li>
 						<li>
 							<div class="media-left">
-								<i class="fa fa-globe"></i>						
+								<i class="fa fa-file-text"></i>						
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading"><a href="#" target="_blank">Документ4</a></h4>
+						    	<h4 class="media-heading">
+								     <a href="documents/nakaz_suddi_25082019.doc" target="_blank">НАКАЗ №5 від 25.08.2019  ПРО ПРИСВОЄННЯ МІЖНАРОДНИХ СУДДІВСЬКИХ КАТЕГОРІЙ</a>
+								</h4>
 							</div>
-						</li>-->
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -302,7 +308,17 @@
 			<hr>
 			<div class="col-md-12">				
 				<div class="media">
-					<ul>                        
+					<ul>
+					    <li>
+							<div class="media-left">
+								<i class="fa fa-file-text"></i>						
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">
+								<a href="documents/polozhenie_o_instructorakh.doc" target="_blank">ПОЛОЖЕННЯ ПРО ПОРЯДОК ПРИСВОЄННЯ ЗВАННЯ «ІНСТРУКТОР З ВІЙСЬКОВО-СПОРТИВНИХ БАГАТОБОРСТВ» З ДИСЦИПЛІНИ «БОЙОВЕ ДВОБОРСТВО»»</a>
+								</h4>
+							</div>
+						</li>                        
                         <li>
 							<div class="media-left">
 								<i class="fa fa-file-text"></i>						
